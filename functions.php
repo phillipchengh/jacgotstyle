@@ -78,7 +78,6 @@ function jacgotstylefonts_url() {
 
 /**
  * Enqueue scripts and styles for the front end.
- * http://codex.wordpress.org/Function_Reference/wp_register_script#Handles_and_Their_Script_Paths_Registered_by_WordPress
  *
  */
 function jacgotstylescripts_styles() {
@@ -90,12 +89,24 @@ function jacgotstylescripts_styles() {
 	/* if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) */
 	/* 	wp_enqueue_script( 'comment-reply' ); // /wp-includes/js/comment-reply.js */
 
-	// Add Genericons font, used in the main stylesheet.
-  // TODO?
-	/* wp_enqueue_style( 'genericons', get_template_directory_uri() . '/fonts/genericons.css', array(), '2.09' ); */
-
 	// Loads our main stylesheet.
 	wp_enqueue_style( 'jac_got_style', get_stylesheet_uri(), array(), '2014-07-01' );
+
+  // Register angular from google.
+  wp_register_script( 'angular', '//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js', array(), null, false );
+
+  // Register jac scripts.
+  wp_register_script( 'app', get_template_directory_uri() . '/js/app.js', array( 'angular' ), null, false );
+  
+  wp_register_script( 'services', get_template_directory_uri() . '/js/services.js', array( 'angular' ), null, false );
+  
+  // Enqueue angular.
+  wp_enqueue_script( 'angular' );
+
+  // Enqueue jac scripts.
+  wp_enqueue_script( 'app' );
+
+  wp_enqueue_script( 'services' );
 
 	}
 add_action( 'wp_enqueue_scripts', 'jacgotstylescripts_styles' );
