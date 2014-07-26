@@ -1,3 +1,5 @@
+<html ng-app="jacatucla">
+<head>
 <?php
 /**
  * The Header template for our theme
@@ -8,6 +10,10 @@
  * @subpackage jacgotstyle
  * @since jacgotstyle 0.1
  */
-  wp_head();
+wp_head();
 ?>
+</head>
+<body>
 HEADER
+<div ng-controller="content_controller">
+</div>

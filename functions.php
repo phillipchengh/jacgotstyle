@@ -97,16 +97,16 @@ function jacgotstylescripts_styles() {
 
   // Register jac scripts.
   wp_register_script( 'app', get_template_directory_uri() . '/js/app.js', array( 'angular' ), null, false );
-  
-  wp_register_script( 'services', get_template_directory_uri() . '/js/services.js', array( 'angular' ), null, false );
-  
+  wp_register_script( 'services', get_template_directory_uri() . '/js/services.js', array( 'angular', 'app' ), null, false );
+  wp_register_script( 'content_controller', get_template_directory_uri() . '/js/content_controller.js', array( 'angular', 'app', 'services' ), null, false );
+
   // Enqueue angular.
   wp_enqueue_script( 'angular' );
 
   // Enqueue jac scripts.
   wp_enqueue_script( 'app' );
-
   wp_enqueue_script( 'services' );
+  wp_enqueue_script( 'content_controller' );
 
 	}
 add_action( 'wp_enqueue_scripts', 'jacgotstylescripts_styles' );
