@@ -95,6 +95,9 @@ function jacgotstylescripts_styles() {
   // Register angular from google.
   wp_register_script( 'angular', '//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js', array(), null, false );
 
+  // Register angular from ourselves.
+  // wp_register_script( 'angular', get_template_directory_uri() . '/js/libs/angular.min.js', array(), null, false );
+
   // Register jac scripts.
   wp_register_script( 'app', get_template_directory_uri() . '/js/app.js', array( 'angular' ), null, false );
   wp_register_script( 'services', get_template_directory_uri() . '/js/services.js', array( 'angular', 'app' ), null, false );

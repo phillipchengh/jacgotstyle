@@ -15,5 +15,3 @@ wp_head();
 </head>
 <body>
 HEADER
-<div ng-controller="content_controller">
-</div>

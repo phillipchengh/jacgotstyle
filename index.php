@@ -15,5 +15,14 @@
  */
 
 get_header(); ?>
-INDEX
+<div ng-controller="content_controller">
+{{site_name}}
+{{site_desc}}
+<div ng-repeat="page in pages">
+  {{$index}}
+  <div>
+  {{page.content}}
+  </div>
+</div>
+</div>
 <?php get_footer(); ?>

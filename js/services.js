@@ -10,5 +10,24 @@ angular.module('jacatucla')
 
   });
 
+  jac_services.get_pages = $http({method: 'GET', url: 'wp-json/pages', params: {'filter[orderby]': 'menu_order', 'filter[order]': 'asc' }})
+  .success(function(data, status, headers, config) {
+
+  })
+  .error(function(data, status, headers, config) {
+
+  });
+
+  jac_services.get_posts = function(offset) {
+    var get_posts_req = $http({method: 'GET', url: 'wp-json/posts', params: {'filter[offset]': offset}}) 
+    .success(function(data, status, headers, config) {
+
+    })
+    .error(function(data, status, headers, config) {
+
+    });
+    return get_posts_req;
+  };
+
   return jac_services;
 });
