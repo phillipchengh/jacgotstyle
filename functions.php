@@ -93,7 +93,9 @@ function jacgotstylescripts_styles() {
 	wp_enqueue_style( 'jac_got_style', get_stylesheet_uri(), array(), '2014-07-01' );
 
   // Register angular from google.
+  wp_register_script( 'jQuery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', array(), null, false );
   wp_register_script( 'angular', '//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js', array(), null, false );
+  wp_register_script( 'angular-route', '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js', array(), null, false );
 
   // Register angular from ourselves.
   // wp_register_script( 'angular', get_template_directory_uri() . '/js/libs/angular.min.js', array(), null, false );
@@ -101,17 +103,21 @@ function jacgotstylescripts_styles() {
   // Register jac scripts.
   wp_register_script( 'app', get_template_directory_uri() . '/js/app.js', array( 'angular' ), null, false );
   wp_register_script( 'services', get_template_directory_uri() . '/js/services.js', array( 'angular', 'app' ), null, false );
-  wp_register_script( 'content_controller', get_template_directory_uri() . '/js/content_controller.js', array( 'angular', 'app', 'services' ), null, false );
+  wp_register_script( 'site_controller', get_template_directory_uri() . '/js/controllers/site_controller.js', array( 'angular', 'app', 'services' ), null, false );
+  wp_register_script( 'blog_controller', get_template_directory_uri() . '/js/controllers/blog_controller.js', array( 'angular', 'app', 'services' ), null, false );
 
   // Enqueue angular.
+  wp_enqueue_script( 'jQuery' );
   wp_enqueue_script( 'angular' );
+  wp_enqueue_script( 'angular-route' );
 
   // Enqueue jac scripts.
   wp_enqueue_script( 'app' );
   wp_enqueue_script( 'services' );
-  wp_enqueue_script( 'content_controller' );
+  wp_enqueue_script( 'site_controller' );
+  wp_enqueue_script( 'blog_controller' );
 
-	}
+}
 add_action( 'wp_enqueue_scripts', 'jacgotstylescripts_styles' );
 
 /**

@@ -15,14 +15,6 @@
  */
 
 get_header(); ?>
-<div ng-controller="content_controller">
-{{site_name}}
-{{site_desc}}
-<div ng-repeat="page in pages">
-  {{$index}}
-  <div>
-  {{page.content}}
-  </div>
-</div>
+<div ng-view>
 </div>
 <?php get_footer(); ?>
