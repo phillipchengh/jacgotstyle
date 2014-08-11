@@ -103,6 +103,8 @@ function jacgotstylescripts_styles() {
   // Register jac scripts.
   wp_register_script( 'app', get_template_directory_uri() . '/js/app.js', array( 'angular' ), null, false );
   wp_register_script( 'services', get_template_directory_uri() . '/js/services.js', array( 'angular', 'app' ), null, false );
+  wp_register_script( 'filters', get_template_directory_uri() . '/js/filters.js', array( 'angular', 'app' ), null, false );
+  wp_register_script( 'directives', get_template_directory_uri() . '/js/directives.js', array( 'angular', 'app' ), null, false );
   wp_register_script( 'site_controller', get_template_directory_uri() . '/js/controllers/site_controller.js', array( 'angular', 'app', 'services' ), null, false );
   wp_register_script( 'blog_controller', get_template_directory_uri() . '/js/controllers/blog_controller.js', array( 'angular', 'app', 'services' ), null, false );
 
@@ -114,6 +116,8 @@ function jacgotstylescripts_styles() {
   // Enqueue jac scripts.
   wp_enqueue_script( 'app' );
   wp_enqueue_script( 'services' );
+  wp_enqueue_script( 'filters' );
+  wp_enqueue_script( 'directives' );
   wp_enqueue_script( 'site_controller' );
   wp_enqueue_script( 'blog_controller' );
 

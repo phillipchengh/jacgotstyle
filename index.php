@@ -15,6 +15,8 @@
  */
 
 get_header(); ?>
+<div jac-sidebar>
+</div>
 <div ng-view>
 </div>
 <?php get_footer(); ?>

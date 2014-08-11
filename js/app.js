@@ -20,6 +20,7 @@ var pages = [
 
 angular.module('jacatucla', ['ngRoute'])
 .constant('pages', pages)
+.constant('CONTENT_PATH', CONTENT_PATH)
 .config(function($routeProvider, $locationProvider, pages) {
   $locationProvider.html5Mode(true);
   for (var i = 0; i < pages.length; i++) {
@@ -28,7 +29,6 @@ angular.module('jacatucla', ['ngRoute'])
   $routeProvider.otherwise({
     redirectTo: BASE_PATH + '/'
   });
-  console.log($routeProvider);
 })
 .run(function() {
   // $routeProvider.otherwise({
