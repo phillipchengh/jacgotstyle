@@ -14,4 +14,10 @@ wp_head();
 ?>
 </head>
 <body>
-HEADER
+<div class="row">
+  <div class="col-12">
+    <div class="header-wrapper">
+      HEADER
+    </div>
+  </div>
+</div>

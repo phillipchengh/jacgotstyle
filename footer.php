@@ -1,4 +1,3 @@
-FOOTER
 <?php
 /**
  * The template for displaying the footer
@@ -10,6 +9,13 @@ FOOTER
  */
   wp_footer();
 ?>
+<div class="row">
+  <div class="col-12">
+    <div class="footer-wrapper">
+      FOOTER
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

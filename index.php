@@ -15,8 +15,14 @@
  */
 
 get_header(); ?>
-<div jac-sidebar>
-</div>
-<div ng-view>
+<div class="row">
+  <div class="col-2">
+    <div jac-sidebar>
+    </div>
+  </div>
+  <div class="col-10">
+    <div ng-view>
+    </div>
+  </div>
 </div>
 <?php get_footer(); ?>

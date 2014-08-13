@@ -7,6 +7,249 @@ Version: 0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+* variables
+*/
+/**
+* grid
+*/
+*,
+*:after,
+*:before {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+[class*='col-'] {
+  float: left;
+  padding: 10px;
+}
+[class*='col-']:last-of-type {
+  float: right;
+  padding-right: 10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.col-1 {
+  width: 8.3333333333%;
+}
+.col-2 {
+  width: 16.6666666667%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.3333333333%;
+}
+.col-5 {
+  width: 41.6666666667%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.3333333333%;
+}
+.col-8 {
+  width: 66.6666666666%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.3333333333%;
+}
+.col-11 {
+  width: 91.6666666667%;
+}
+.col-12 {
+  width: 100%;
+}
+@media (min-width: 800px) and (max-width: 100px) {
+  .col-2,
+  .col-7 {
+    width: 100%;
+  }
+  .col-4,
+  .col-8,
+  .col-10,
+  .col-12 {
+    width: 50%;
+  }
+}
+@media (max-width: 800px) {
+  .col-4,
+  .col-6,
+  .col-8,
+  .col-10,
+  .col-12 {
+    width: 50%;
+  }
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-5,
+  .col-7,
+  .col-9,
+  .col-11 {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12 {
+    width: 100%;
+  }
+}
+/**
+* hello!!
+*/
 /**
  * Table of Contents:
  *
@@ -35,15 +278,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * 7.0 - Footer
  * 8.0 - Media Queries
  * 9.0 - Print
- * ----------------------------------------------------------------------------
- */
-/**
- * 1.0 Reset
- *
- * Modified from Normalize.css to provide cross-browser consistency and a smart
- * default styling of HTML elements.
- *
- * @see http://git.io/normalize
  * ----------------------------------------------------------------------------
  */
 /**
@@ -142,4 +376,3 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * 9.0 Print
  * ----------------------------------------------------------------------------
  */
-
