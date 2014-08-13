@@ -26,7 +26,7 @@ function jacgotstylesetup() {
 	 */
 	add_editor_style( array( 'css/editor-style.css', 'fonts/genericons.css', jacgotstylefonts_url() ) );
 
-	register_nav_menu( 'primary', __( 'Navigation Menu', 'jacgotstyle' ) );
+	register_nav_menu( 'jac_menu', __( 'Navigation Menu', 'jacgotstyle' ) );
 
 		}
 add_action( 'after_setup_theme', 'jacgotstylesetup' );

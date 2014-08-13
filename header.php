@@ -21,3 +21,21 @@ wp_head();
     </div>
   </div>
 </div>
+<div class="row">
+  <div class="col-12">
+    <?php 
+    $menu_name = 'jac_menu';
+    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+      $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+      $menu_items = wp_get_nav_menu_items($menu->term_id);
+      foreach( (array) $menu_items as $key => $menu_item ) : 
+        $url = $menu_item->url;
+        $title = $menu_item->title;
+    ?>
+    <a href="<?= $url ?>"><?= $title ?></a>
+    <?php
+      endforeach; 
+    }
+    ?>
+  </div>
+</div>
