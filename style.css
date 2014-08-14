@@ -141,6 +141,9 @@ table {
 * variables
 */
 /**
+* hello!!
+*/
+/**
 * grid
 */
 *,
@@ -154,11 +157,11 @@ table {
 }
 [class*='col-'] {
   float: left;
-  padding: 10px;
+  padding: 0px;
 }
 [class*='col-']:last-of-type {
   float: right;
-  padding-right: 10px;
+  padding-right: 0px;
 }
 .row:after {
   content: "";
@@ -247,9 +250,27 @@ table {
     width: 100%;
   }
 }
-/**
-* hello!!
-*/
+.nav-item-wrapper {
+  display: inline-block;
+}
+* {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+* * {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+* * * {
+  background-color: rgba(0, 0, 255, 0.2);
+}
+* * * * {
+  background-color: rgba(255, 0, 255, 0.2);
+}
+* * * * * {
+  background-color: rgba(0, 255, 255, 0.2);
+}
+* * * * * * {
+  background-color: rgba(255, 255, 0, 0.2);
+}
 /**
  * Table of Contents:
  *

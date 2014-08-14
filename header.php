@@ -22,7 +22,7 @@ wp_head();
   </div>
 </div>
 <div class="row">
-  <div class="col-12">
+  <div class="col-12 nav-wrapper">
     <?php 
     $menu_name = 'jac_menu';
     if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
@@ -32,7 +32,9 @@ wp_head();
         $url = $menu_item->url;
         $title = $menu_item->title;
     ?>
-    <a href="<?= $url ?>"><?= $title ?></a>
+    <div class="nav-item-wrapper">
+      <a href="<?= $url ?>"><?= $title ?></a>
+    </div>
     <?php
       endforeach; 
     }
