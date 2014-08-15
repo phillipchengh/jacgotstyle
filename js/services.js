@@ -18,8 +18,8 @@ angular.module('jacatucla')
 
   });
 
-  jac_services.get_posts = function(offset) {
-    var get_posts_req = $http({method: 'GET', url: 'wp-json/posts', params: {'filter[offset]': offset}}) 
+  jac_services.get_posts = function(index) {
+    var get_posts_req = $http({method: 'GET', url: 'wp-json/posts', params: {'page': index}}) 
     .success(function(data, status, headers, config) {
 
     })
