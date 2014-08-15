@@ -8,10 +8,12 @@ angular.module('jacatucla')
     $scope.posts = response.data;
   });
 
-  // TODO User could prev past the oldest post with index still incrementing
   $scope.prev_posts = function() {
     jac_services.get_posts($scope.index+1)
     .then(function(response) {
+      if (response.data.length === 0) {
+        return;
+      }
       $scope.posts = response.data;
       $scope.index++;
     });
@@ -25,7 +27,6 @@ angular.module('jacatucla')
     jac_services.get_posts($scope.index) 
     .then(function(response) {
       $scope.posts = response.data;
-      console.log('next');
     });
   };
 
