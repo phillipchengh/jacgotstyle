@@ -1,8 +1,8 @@
 <!-- title, date, categories, author, content, leave comment -->
 <div class="row">
   <div class="col-12">
-    <a href="" ng-click="prev_posts()">Prev</a>
-    <a href="" ng-click="next_posts()">Next</a>
+    <button ng-click="prev_posts()">Prev</button>
+    <button ng-click="next_posts()">Next</button>
   </div>
 </div>
 <div class="row">
@@ -12,7 +12,7 @@
         {{post.title}}: {{post.link}}
       </h1>
       <div>
-        {{post.date}}
+        {{post.date | convert_rfc_date}}
       </div>
       <div>
         {{post.author.username}}: {{post.author.meta.links.archives}}
@@ -25,6 +25,6 @@
       <div>
         Replies: {{post.meta.links.replies}}
       </div>
-    </div>
+      </div>
   </div>
 </div>
