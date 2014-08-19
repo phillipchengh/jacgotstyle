@@ -17,8 +17,7 @@
 get_header(); ?>
 <div class="row">
   <div class="col-2">
-    <div jac-sidebar>
-    </div>
+    <?php get_sidebar(); ?>
   </div>
   <div class="col-10">
     <div ng-view>

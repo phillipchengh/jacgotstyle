@@ -7,7 +7,7 @@ var concat = require('gulp-concat');
 
 var onError = function(err) {
 	util.beep();
-	console.err(err);
+	console.log(err);
 };
 
 gulp.task('styles', function() {

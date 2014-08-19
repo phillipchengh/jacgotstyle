@@ -250,9 +250,6 @@ table {
     width: 100%;
   }
 }
-.nav-item-wrapper {
-  display: inline-block;
-}
 * {
   background-color: rgba(255, 0, 0, 0.2);
 }
