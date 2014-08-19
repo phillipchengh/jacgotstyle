@@ -7,7 +7,7 @@
  * @subpackage jacgotstyle
  * @since jacgotstyle 0.1
  */
-  wp_footer();
+wp_footer();
 ?>
 <div class="row">
   <div class="col-12">
@@ -16,6 +16,6 @@
     </div>
   </div>
 </div>
-
+</div> 
 </body>
 </html>

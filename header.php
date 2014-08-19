@@ -14,6 +14,7 @@ wp_head();
 ?>
 </head>
 <body>
+<div class="site-wrapper">
 <div class="row">
   <div class="col-12">
     <div class="header-wrapper">
