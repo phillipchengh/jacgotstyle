@@ -11,6 +11,6 @@ angular.module('jacatucla')
     var month = months[unix_time.getMonth() - 1];
     var day = unix_time.getDate();
     var year = unix_time.getFullYear();
-    return month + ', ' + day + ' ' + year;
+    return month + ' ' + day + ', ' + year;
   };
 });

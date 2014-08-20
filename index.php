@@ -23,20 +23,30 @@ get_header(); ?>
     <div ng-view>
     </div>
     <noscript>
+      <div class="row">
+        <div class="col-12">
+          <button>Prev</button>
+          <button>Next</button>
+        </div>
+      </div>
+      <div class="row">
       <?php
         $posts = get_posts();
         foreach ( $posts as $post ) : 
           setup_postdata( $post );
           $title = get_the_title();
           $content = get_the_content();
+          $date = get_the_date();
       ?>
-        <div>
+        <div class="post">
           <?= $title ?>  
           <?= $content ?>
+          <?= $date ?>
         </div>
       <?php
         endforeach; 
       ?>
+    </div>
     </noscript>
   </div>
 </div>
