@@ -22,6 +22,22 @@ get_header(); ?>
   <div class="col-10">
     <div ng-view>
     </div>
+    <noscript>
+      <?php
+        $posts = get_posts();
+        foreach ( $posts as $post ) : 
+          setup_postdata( $post );
+          $title = get_the_title();
+          $content = get_the_content();
+      ?>
+        <div>
+          <?= $title ?>  
+          <?= $content ?>
+        </div>
+      <?php
+        endforeach; 
+      ?>
+    </noscript>
   </div>
 </div>
 <?php get_footer(); ?>
