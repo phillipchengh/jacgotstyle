@@ -144,7 +144,7 @@ table {
 * hello!!
 */
 .site-wrapper {
-  margin: 50px 50px;
+  margin: 50px 75px;
 }
 @media (max-width: 760px) {
   .site-wrapper {
