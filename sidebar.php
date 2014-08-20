@@ -1,6 +1,6 @@
 <div>
-SIDEBAR
   <?php 
+    // Get the jac_menu. This is registered in functions.php and managed in wp-admin.
     $menu_name = 'jac_menu';
     if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
       $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
