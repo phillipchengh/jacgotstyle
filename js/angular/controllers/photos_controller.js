@@ -6,4 +6,10 @@ angular.module('jacatucla')
     $scope.albums = response.data.feed.entry;
   });
 
+  $scope.get_photos = function(album_id) {
+    jac_services.get_photos(album_id)
+    .then(function(response) {
+      console.log(response.data); 
+    });
+  };
 });

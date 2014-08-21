@@ -2,6 +2,8 @@
 <div ng-repeat="album in albums">
   <h1>{{album.title.$t}}</h1>
   <h2>{{album.gphoto$numphotos.$t}} photos</h2>
-  <img ng-src="{{album.media$group.media$thumbnail[0].url}}"></img>
+  <div ng-click="get_photos(album.gphoto$id.$t)">
+    <img ng-src="{{album.media$group.media$thumbnail[0].url}}"></img>
+  </div>
   <!-- <img ng-src="{{album.media$group.media$content[0].url}}"></img> -->
 </div>

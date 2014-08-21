@@ -110,6 +110,17 @@ angular.module('jacatucla')
     
   });
 
+  jac_services.get_photos = function(album_id) {
+     var get_photos_req = $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001/albumid/' + album_id + '?alt=json'}) 
+    .success(function(data, status, headers, config) {
+
+    })
+    .error(function(data, status, headers, config) {
+
+    });
+    return get_photos_req;
+  };
+
   return jac_services;
 });
 
@@ -155,6 +166,12 @@ angular.module('jacatucla')
     $scope.albums = response.data.feed.entry;
   });
 
+  $scope.get_photos = function(album_id) {
+    jac_services.get_photos(album_id)
+    .then(function(response) {
+      console.log(response.data); 
+    });
+  };
 });
 
 angular.module('jacatucla')
