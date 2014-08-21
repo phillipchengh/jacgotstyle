@@ -81,14 +81,7 @@ function jacgotstylefonts_url() {
  *
  */
 function jacgotstylescripts_styles() {
-	/*
-	 * Adds JavaScript to pages with the comment form to support
-	 * sites with threaded comments (when in use).
-   * TODO?
-	 */
-	/* if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) */
-	/* 	wp_enqueue_script( 'comment-reply' ); // /wp-includes/js/comment-reply.js */
-
+	
 	// Loads our main stylesheet.
 	wp_enqueue_style( 'jac_got_style', get_stylesheet_uri(), array(), '2014-07-01' );
 
@@ -100,27 +93,17 @@ function jacgotstylescripts_styles() {
   // Register angular from ourselves.
   // wp_register_script( 'angular', get_template_directory_uri() . '/js/libs/angular.min.js', array(), null, false );
 
-  // Register jac scripts.
-  wp_register_script( 'app', get_template_directory_uri() . '/js/app.js', array( 'angular' ), null, false );
-  wp_register_script( 'services', get_template_directory_uri() . '/js/services.js', array( 'angular', 'app' ), null, false );
-  wp_register_script( 'filters', get_template_directory_uri() . '/js/filters.js', array( 'angular', 'app' ), null, false );
-  wp_register_script( 'directives', get_template_directory_uri() . '/js/directives.js', array( 'angular', 'app' ), null, false );
-  wp_register_script( 'site_controller', get_template_directory_uri() . '/js/controllers/site_controller.js', array( 'angular', 'app', 'services' ), null, false );
-  wp_register_script( 'blog_controller', get_template_directory_uri() . '/js/controllers/blog_controller.js', array( 'angular', 'app', 'services' ), null, false );
-
+  // Register our main javascript.
+  wp_register_script( 'jacatucla', get_template_directory_uri() . '/js/jacatucla.js', array( 'angular', 'angular-route' ), null, false );
+  
   // Enqueue angular.
   wp_enqueue_script( 'jQuery' );
   wp_enqueue_script( 'angular' );
   wp_enqueue_script( 'angular-route' );
 
-  // Enqueue jac scripts.
-  wp_enqueue_script( 'app' );
-  wp_enqueue_script( 'services' );
-  wp_enqueue_script( 'filters' );
-  wp_enqueue_script( 'directives' );
-  wp_enqueue_script( 'site_controller' );
-  wp_enqueue_script( 'blog_controller' );
-
+  // Enqueue our main javascript.
+  wp_enqueue_script( 'jacatucla' );
+ 
 }
 add_action( 'wp_enqueue_scripts', 'jacgotstylescripts_styles' );
 
