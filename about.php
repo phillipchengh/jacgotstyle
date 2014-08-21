@@ -13,7 +13,11 @@ get_header(); ?>
     <?php get_sidebar(); ?>
   </div>
   <div class="col-10">
-    <?php include ('templates/about.html'); ?> 
+    <div ng-view>
+    </div>
+    <noscript>
+      <?php include ('templates/about.html'); ?> 
+    <noscript/>
   </div>
 </div>
 <?php get_footer(); ?>

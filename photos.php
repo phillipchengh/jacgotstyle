@@ -13,7 +13,11 @@ get_header(); ?>
     <?php get_sidebar(); ?>
   </div>
   <div class="col-10">
-    <?php include ('templates/photos.html'); ?> 
+    <div ng-view>
+    </div>
+    <noscript>
+      You need JavaScript to view our photos on this page, but you can view our albums at <a href="https://plus.google.com/photos/116245231045240410001/albums?banner=pwa">picasa.</a>
+    </noscript>
   </div>
 </div>
 <?php get_footer(); ?>
