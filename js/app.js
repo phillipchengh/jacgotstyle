@@ -1,5 +1,6 @@
 var BASE_PATH = '/wordpress';
 var CONTENT_PATH = 'wp-content/themes/jacgotstyle/';
+
 var pages = [
   {
     name: 'Home',
@@ -14,6 +15,14 @@ var pages = [
     path: BASE_PATH + '/about',
     route: {
       templateUrl: CONTENT_PATH + 'templates/about.html'
+    }
+  },
+  {
+    name: 'Photos',
+    path: BASE_PATH + '/photos',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/photos.html',
+      controller: 'photos_controller'
     }
   }
 ];

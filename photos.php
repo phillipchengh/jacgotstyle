@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About
+ * Template Name: Photos
  *
  * @package WordPress
  * @subpackage jacgotstyle
@@ -13,7 +13,7 @@ get_header(); ?>
     <?php get_sidebar(); ?>
   </div>
   <div class="col-10">
-    <?php include ('templates/about.html'); ?> 
+    <?php include ('templates/photos.html'); ?> 
   </div>
 </div>
 <?php get_footer(); ?>
