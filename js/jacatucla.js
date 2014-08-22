@@ -24,12 +24,21 @@ var pages = [
       templateUrl: CONTENT_PATH + 'templates/photos.html',
       controller: 'photos_controller'
     }
+  },
+  {
+    name: 'Photoset',
+    path: BASE_PATH + '/photoset',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/photoset.html',
+      controller: 'photoset_controller'
+    }
   }
 ];
 
 angular.module('jacatucla', ['ngRoute'])
 .constant('pages', pages)
 .constant('CONTENT_PATH', CONTENT_PATH)
+.constant('BASE_PATH', BASE_PATH)
 .config(function($routeProvider, $locationProvider, pages) {
   $locationProvider.html5Mode(true);
   for (var i = 0; i < pages.length; i++) {
@@ -102,7 +111,7 @@ angular.module('jacatucla')
     return get_posts_req;
   };
 
-  jac_services.get_albums = $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001?alt=json'})
+  jac_services.get_albums = $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001', params: {'alt': 'json'}})
   .success(function(data, status, headers, config) {
     
   })
@@ -111,7 +120,7 @@ angular.module('jacatucla')
   });
 
   jac_services.get_photos = function(album_id) {
-     var get_photos_req = $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001/albumid/' + album_id + '?alt=json'}) 
+     var get_photos_req = $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001/albumid/' + album_id, params: {'alt': 'json', 'thumbsize': '160'}}) 
     .success(function(data, status, headers, config) {
 
     })
@@ -159,19 +168,30 @@ angular.module('jacatucla')
 });
 
 angular.module('jacatucla')
-.controller('photos_controller', function($scope, jac_services) {
+.controller('photos_controller', function($scope, jac_services, BASE_PATH) {
+
+  $scope.BASE_PATH = BASE_PATH;
 
   jac_services.get_albums
   .then(function(response) {
     $scope.albums = response.data.feed.entry;
   });
+  
+});
 
-  $scope.get_photos = function(album_id) {
-    jac_services.get_photos(album_id)
-    .then(function(response) {
-      console.log(response.data); 
-    });
-  };
+angular.module('jacatucla')
+.controller('photoset_controller', function($scope, jac_services, $routeParams) {
+
+  var album_id = $routeParams.album_id;
+  
+  jac_services.get_photos(album_id)
+  .error(function(data, status, headers, config) {
+    console.log('error!');
+  })
+  .then(function(response) {
+    $scope.photos = response.data.feed.entry;
+  });
+
 });
 
 angular.module('jacatucla')

@@ -29,7 +29,7 @@ angular.module('jacatucla')
     return get_posts_req;
   };
 
-  jac_services.get_albums = $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001?alt=json'})
+  jac_services.get_albums = $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001', params: {'alt': 'json'}})
   .success(function(data, status, headers, config) {
     
   })
@@ -38,7 +38,7 @@ angular.module('jacatucla')
   });
 
   jac_services.get_photos = function(album_id) {
-     var get_photos_req = $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001/albumid/' + album_id + '?alt=json'}) 
+     var get_photos_req = $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001/albumid/' + album_id, params: {'alt': 'json', 'thumbsize': '160'}}) 
     .success(function(data, status, headers, config) {
 
     })

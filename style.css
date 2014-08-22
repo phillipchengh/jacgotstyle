@@ -861,6 +861,9 @@ Using these styles for posts since previous posts used this theme.
   background: none;
   content: none;
 }
+.photos-wrapper {
+  text-align: center;
+}
 .thumbnail-wrapper {
   display: inline-block;
 }

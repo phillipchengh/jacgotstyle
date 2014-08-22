@@ -24,12 +24,21 @@ var pages = [
       templateUrl: CONTENT_PATH + 'templates/photos.html',
       controller: 'photos_controller'
     }
+  },
+  {
+    name: 'Photoset',
+    path: BASE_PATH + '/photoset',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/photoset.html',
+      controller: 'photoset_controller'
+    }
   }
 ];
 
 angular.module('jacatucla', ['ngRoute'])
 .constant('pages', pages)
 .constant('CONTENT_PATH', CONTENT_PATH)
+.constant('BASE_PATH', BASE_PATH)
 .config(function($routeProvider, $locationProvider, pages) {
   $locationProvider.html5Mode(true);
   for (var i = 0; i < pages.length; i++) {

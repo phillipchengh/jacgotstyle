@@ -1,0 +1,9 @@
+<div class="photos-wrapper">
+  <h1>Photoset!</h1>
+  <span ng-repeat="photo in photos">
+    <div class="thumbnail-wrapper">
+      <!-- <img ng-src="{{photo.content.src}}"> -->
+      <img ng-src="{{photo.media$group.media$thumbnail[0].url}}"></img>
+    </div>
+  </span>
+</div>
