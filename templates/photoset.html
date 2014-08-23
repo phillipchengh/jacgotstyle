@@ -5,11 +5,15 @@
       <img ng-src="{{photo.media$group.media$thumbnail[0].url}}"></img>
     </div>
   </span>
-  <div class="slider" ng-show="slider">
-    <span ng-repeat="photo in photos">
-      <div ng-show="$index == 0">
-        <img ng-src="{{photo.content.src}}"></img>
+  <div class="slider-wrapper" ng-show="slider">
+    <div class="slider-content">
+      <div class="slider-helper">
       </div>
-    </span>
+      <span ng-repeat="photo in photos">
+        <div class="slider-img" ng-show="$index == 0">
+          <img ng-src="{{photo.content.src}}"></img>
+        </div>
+      </span>
+    </div>
   </div>
 </div>

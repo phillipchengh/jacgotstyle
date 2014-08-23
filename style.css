@@ -873,12 +873,25 @@ Using these styles for posts since previous posts used this theme.
   white-space: nowrap;
   width: 160px;
 }
-.slider {
+.slider-wrapper {
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+}
+.slider-content {
+  height: 100%;
+  padding: 20px;
+}
+.slider-helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.slider-img {
+  display: inline-block;
+  vertical-align: middle;
 }
 * {
   background-color: rgba(255, 0, 0, 0.2);
