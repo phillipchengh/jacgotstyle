@@ -874,10 +874,12 @@ Using these styles for posts since previous posts used this theme.
   width: 160px;
 }
 .slider-wrapper {
-  height: 100%;
+  background-color: black;
+  bottom: 0;
   position: fixed;
   top: 0;
   left: 0;
+  margin: 20px;
   width: 100%;
 }
 .slider-content {

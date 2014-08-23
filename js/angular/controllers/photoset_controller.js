@@ -4,11 +4,6 @@ angular.module('jacatucla')
   var album_id = $routeParams.album_id;
   $scope.slider = false;
 
-  var resize_slider = function() {
-    var slider_height = $(window).height();
-    var slider_width = $(window).width();
-  };
-
   $scope.show_slider = function() {
     $scope.slider = true;
     $document.bind('keydown', function(e) {
@@ -18,8 +13,6 @@ angular.module('jacatucla')
         case 39: console.log('slide right'); break;
       }
     });
-    $(window).resize(resize_slider);
-    resize_slider();
     $('body').css({'overflow': 'hidden'});
   };
 
@@ -27,7 +20,6 @@ angular.module('jacatucla')
   $scope.hide_slider = function() {
     $scope.slider = false;
     $document.unbind('keydown');
-    $(window).unbind('resize');
     $('body').css({'overflow': 'auto'});
     $scope.$apply();
   };
