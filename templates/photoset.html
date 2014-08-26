@@ -10,7 +10,7 @@
       <div class="slider-helper">
       </div>
       <span ng-repeat="photo in photos">
-        <div class="slider-img" ng-show="$index == 0">
+        <div class="slider-img" ng-show="index === $index">
           <img ng-src="{{photo.content.src}}"></img>
         </div>
       </span>

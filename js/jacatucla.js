@@ -152,24 +152,35 @@ angular.module('jacatucla')
 
   var album_id = $routeParams.album_id;
   $scope.slider = false;
+  $scope.index = 0;
 
   $scope.show_slider = function() {
     $scope.slider = true;
     $document.bind('keydown', function(e) {
       switch (e.keyCode) {
         case 27: $scope.hide_slider(); break;
-        case 37: console.log('slide left'); break;
-        case 39: console.log('slide right'); break;
+        case 37: console.log('slider left'); $scope.prev_photo(); break;
+        case 39: console.log('slide right'); $scope.next_photo(); break;
       }
     });
-    $('body').css({'overflow': 'hidden'});
+    $('html, body').css({'height': '100%', 'overflow-y': 'hidden'});
   };
 
 
   $scope.hide_slider = function() {
     $scope.slider = false;
     $document.unbind('keydown');
-    $('body').css({'overflow': 'auto'});
+    $('html, body').css({'height': 'auto', 'overflow-y': 'auto'});
+    $scope.$apply();
+  };
+
+  $scope.prev_photo = function() {
+    $scope.index = ($scope.index < 0) ? ($scope.photos.length - 1) : $scope.index - 1;
+    $scope.$apply();
+  };
+
+  $scope.next_photo = function() {
+    $scope.index = ($scope.index > ($scope.photos.length - 1)) ? 0 : $scope.index + 1;
     $scope.$apply();
   };
 
