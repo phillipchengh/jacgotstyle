@@ -166,7 +166,6 @@ angular.module('jacatucla')
     $('html, body').css({'height': '100%', 'overflow-y': 'hidden'});
   };
 
-
   $scope.hide_slider = function() {
     $scope.slider = false;
     $document.unbind('keydown');
