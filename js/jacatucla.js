@@ -175,12 +175,12 @@ angular.module('jacatucla')
   };
 
   $scope.prev_photo = function() {
-    $scope.index = ($scope.index < 0) ? ($scope.photos.length - 1) : $scope.index - 1;
+    $scope.index = ($scope.index-1 < 0) ? ($scope.photos.length - 1) : $scope.index - 1;
     $scope.$apply();
   };
 
   $scope.next_photo = function() {
-    $scope.index = ($scope.index > ($scope.photos.length - 1)) ? 0 : $scope.index + 1;
+    $scope.index = ($scope.index+1 > ($scope.photos.length - 1)) ? 0 : $scope.index + 1;
     $scope.$apply();
   };
 
