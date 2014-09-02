@@ -84,6 +84,8 @@ function jacgotstylescripts_styles() {
 	
 	// Loads our main stylesheet.
 	wp_enqueue_style( 'jac_got_style', get_stylesheet_uri(), array(), '2014-07-01' );
+  /* wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css', array(), '2014-07-01' ); */
+  /* wp_enqueue_style( 'bootstrap-carousel', 'http://blog.revolunet.com/angular-carousel/dist/angular-carousel.min.css', array(), '2014-07-01' ); */
 
   // Register angular from google.
   wp_register_script( 'jQuery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', array(), null, false );

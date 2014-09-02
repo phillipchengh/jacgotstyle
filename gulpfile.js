@@ -31,7 +31,7 @@ gulp.task('styles', function() {
 
 // Concat js files into jacatucla.js
 gulp.task('scripts', function() {
-  gulp.src(['js/angular/app.js', 'js/angular/modules/*.js', 'js/angular/controllers/*.js'],
+  gulp.src(['js/libs/*.js', 'js/angular/app.js', 'js/angular/modules/*.js', 'js/angular/controllers/*.js'],
            {base: '.'}) 
   .pipe(plumber({
     errorHandler: onError
@@ -42,8 +42,8 @@ gulp.task('scripts', function() {
 
 // Rerun tasks on file changes
 gulp.task('watch', function() {
-  gulp.watch('less/**', ['styles']);
-  gulp.watch('js/**', ['scripts']); 
+  gulp.watch('./less/**', ['styles']);
+  gulp.watch('./js/**', ['scripts']); 
 });
 
 // Assign tasks to default task
