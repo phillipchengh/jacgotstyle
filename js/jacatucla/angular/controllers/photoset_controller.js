@@ -5,8 +5,8 @@ var modal_controller = function($scope, $modalInstance, $document, photos) {
   .then(function() {
     $document.bind('keydown', function(e) {
       switch (e.keyCode) {
-        case 37: console.log('left'); $('.left.carousel-control').click(); break;
-        case 39: console.log('right'); $('.right.carousel-control').click(); break;
+        case 37: $('.left.carousel-control').click(); break;
+        case 39: $('.right.carousel-control').click(); break;
       }
     });
   });

@@ -31,7 +31,7 @@ gulp.task('styles', function() {
 
 // Concat js files into jacatucla.js
 gulp.task('scripts', function() {
-  gulp.src(['js/libs/*.js', 'js/angular/app.js', 'js/angular/modules/*.js', 'js/angular/controllers/*.js'],
+  gulp.src(['js/jacatucla/**/*.js'],
            {base: '.'}) 
   .pipe(plumber({
     errorHandler: onError

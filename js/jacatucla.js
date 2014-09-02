@@ -1,3 +1,61 @@
+var BASE_PATH = '/wordpress';
+var CONTENT_PATH = 'wp-content/themes/jacgotstyle/';
+
+var pages = [
+  {
+    name: 'Home',
+    path: BASE_PATH + '/',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/blog.html',
+      controller: 'blog_controller'
+    }
+  },
+  {
+    name: 'About',
+    path: BASE_PATH + '/about',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/about.html'
+    }
+  },
+  {
+    name: 'Photos',
+    path: BASE_PATH + '/photos',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/photos.html',
+      controller: 'photos_controller'
+    }
+  },
+  {
+    name: 'Photoset',
+    path: BASE_PATH + '/photoset',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/photoset.html',
+      controller: 'photoset_controller'
+    }
+  }
+];
+
+angular.module('jacatucla', ['ngRoute', 'ui.bootstrap'])
+.constant('pages', pages)
+.constant('CONTENT_PATH', CONTENT_PATH)
+.constant('BASE_PATH', BASE_PATH)
+.config(function($routeProvider, $locationProvider, pages) {
+  $locationProvider.html5Mode(true);
+  for (var i = 0; i < pages.length; i++) {
+    $routeProvider.when(pages[i].path, pages[i].route);  
+  }
+  $routeProvider.otherwise({
+    redirectTo: BASE_PATH + '/'
+  });
+})
+.run(function() {
+  // $routeProvider.otherwise({
+  //   redirectTo: '/'
+  // });
+
+  // $http.get('/')
+});
+
 /*
  * angular-ui-bootstrap
  * http://angular-ui.github.io/bootstrap/
@@ -1660,109 +1718,6 @@ angular.module("template/modal/window.html", []).run(["$templateCache", function
     "</div>");
 }]);
 
-var BASE_PATH = '/wordpress';
-var CONTENT_PATH = 'wp-content/themes/jacgotstyle/';
-
-var pages = [
-  {
-    name: 'Home',
-    path: BASE_PATH + '/',
-    route: {
-      templateUrl: CONTENT_PATH + 'templates/blog.html',
-      controller: 'blog_controller'
-    }
-  },
-  {
-    name: 'About',
-    path: BASE_PATH + '/about',
-    route: {
-      templateUrl: CONTENT_PATH + 'templates/about.html'
-    }
-  },
-  {
-    name: 'Photos',
-    path: BASE_PATH + '/photos',
-    route: {
-      templateUrl: CONTENT_PATH + 'templates/photos.html',
-      controller: 'photos_controller'
-    }
-  },
-  {
-    name: 'Photoset',
-    path: BASE_PATH + '/photoset',
-    route: {
-      templateUrl: CONTENT_PATH + 'templates/photoset.html',
-      controller: 'photoset_controller'
-    }
-  }
-];
-
-angular.module('jacatucla', ['ngRoute', 'ui.bootstrap'])
-.constant('pages', pages)
-.constant('CONTENT_PATH', CONTENT_PATH)
-.constant('BASE_PATH', BASE_PATH)
-.config(function($routeProvider, $locationProvider, pages) {
-  $locationProvider.html5Mode(true);
-  for (var i = 0; i < pages.length; i++) {
-    $routeProvider.when(pages[i].path, pages[i].route);  
-  }
-  $routeProvider.otherwise({
-    redirectTo: BASE_PATH + '/'
-  });
-})
-.run(function() {
-  // $routeProvider.otherwise({
-  //   redirectTo: '/'
-  // });
-
-  // $http.get('/')
-});
-
-angular.module('jacatucla')
-.directive('jacSidebar', function(CONTENT_PATH) {
-  return {
-    templateUrl: CONTENT_PATH + 'templates/sidebar.php'
-  };
-});
-
-angular.module('jacatucla')
-.filter('to_trusted', ['$sce', function($sce) {
-  return function(text) {
-    return $sce.trustAsHtml(text);
-  };
-}])
-.filter('convert_rfc_date', function() {
-  return function(date_string) {
-    var unix_time = new Date(date_string);
-    var months = ["January", "February", "March", "April", "June", "July", "August", "September", "October", "November", "December"];
-    var month = months[unix_time.getMonth() - 1];
-    var day = unix_time.getDate();
-    var year = unix_time.getFullYear();
-    return month + ' ' + day + ', ' + year;
-  };
-});
-
-angular.module('jacatucla')
-.factory('jac_services', function($http) {
-  var jac_services = {};
-
-  jac_services.get_site_info = $http({method: 'GET', url: 'wp-json/'});
-
-  jac_services.get_pages = $http({method: 'GET', url: 'wp-json/pages', params: {'filter[orderby]': 'menu_order', 'filter[order]': 'asc' }});
-  
-  jac_services.get_posts = function(index) {
-    return $http({method: 'GET', url: 'wp-json/posts', params: {'page': index}});
-  };
-
-  jac_services.get_albums = $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001', params: {'alt': 'json'}});
-  
-  jac_services.get_photos = function(album_id) {
-     return $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001/albumid/' + album_id, params: {'alt': 'json', 'thumbsize': '160'}});
-  };
-
-  return jac_services;
-});
-
 angular.module('jacatucla')
 .controller('blog_controller', function($scope, $sce, jac_services) {
   
@@ -1816,8 +1771,8 @@ var modal_controller = function($scope, $modalInstance, $document, photos) {
   .then(function() {
     $document.bind('keydown', function(e) {
       switch (e.keyCode) {
-        case 37: console.log('left'); $('.left.carousel-control').click(); break;
-        case 39: console.log('right'); $('.right.carousel-control').click(); break;
+        case 37: $('.left.carousel-control').click(); break;
+        case 39: $('.right.carousel-control').click(); break;
       }
     });
   });
@@ -1873,4 +1828,49 @@ angular.module('jacatucla')
     $scope.pages = response.data;
   });
 
+});
+
+angular.module('jacatucla')
+.directive('jacSidebar', function(CONTENT_PATH) {
+  return {
+    templateUrl: CONTENT_PATH + 'templates/sidebar.php'
+  };
+});
+
+angular.module('jacatucla')
+.filter('to_trusted', ['$sce', function($sce) {
+  return function(text) {
+    return $sce.trustAsHtml(text);
+  };
+}])
+.filter('convert_rfc_date', function() {
+  return function(date_string) {
+    var unix_time = new Date(date_string);
+    var months = ["January", "February", "March", "April", "June", "July", "August", "September", "October", "November", "December"];
+    var month = months[unix_time.getMonth() - 1];
+    var day = unix_time.getDate();
+    var year = unix_time.getFullYear();
+    return month + ' ' + day + ', ' + year;
+  };
+});
+
+angular.module('jacatucla')
+.factory('jac_services', function($http) {
+  var jac_services = {};
+
+  jac_services.get_site_info = $http({method: 'GET', url: 'wp-json/'});
+
+  jac_services.get_pages = $http({method: 'GET', url: 'wp-json/pages', params: {'filter[orderby]': 'menu_order', 'filter[order]': 'asc' }});
+  
+  jac_services.get_posts = function(index) {
+    return $http({method: 'GET', url: 'wp-json/posts', params: {'page': index}});
+  };
+
+  jac_services.get_albums = $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001', params: {'alt': 'json'}});
+  
+  jac_services.get_photos = function(album_id) {
+     return $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001/albumid/' + album_id, params: {'alt': 'json', 'thumbsize': '160'}});
+  };
+
+  return jac_services;
 });
