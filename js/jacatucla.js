@@ -1764,7 +1764,7 @@ angular.module('jacatucla')
   
 });
 
-var modal_controller = function($scope, $modalInstance, $document, photos, start) {
+var modal_controller = function($scope, $modalInstance, $document, $timeout, photos, start) {
   $scope.slides = photos;
   console.log('start: ' + start);
 
@@ -1775,6 +1775,9 @@ var modal_controller = function($scope, $modalInstance, $document, photos, start
         case 37: $('.left.carousel-control').click(); break;
         case 39: $('.right.carousel-control').click(); break;
       }
+    });
+    $timeout(function() {
+      $('.carousel-indicators').children().eq(start).click();
     });
   });
  };
@@ -1800,7 +1803,6 @@ angular.module('jacatucla')
     });
 
     modal.result.then(function(selected_item) {
-
     }, function() {
       $document.unbind('keydown.jacatucla');
     });
