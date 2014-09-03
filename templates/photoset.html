@@ -2,7 +2,7 @@
   <h1>Photoset!</h1>
   <button ng-click="open_slider()">hohohoho</button>
   <span ng-repeat="photo in photos">
-    <div class="thumbnail-wrapper" ng-click="show_slider()">
+    <div class="thumbnail-wrapper" ng-click="open_slider($index)">
       <img ng-src="{{photo.media$group.media$thumbnail[0].url}}"></img>
     </div>
   </span>
@@ -25,7 +25,7 @@
       <slide ng-repeat="slide in slides" active="slide.active">
         <img class="carousel-image" ng-src="{{slide.content.src}}">
         <div class="carousel-caption">
-          <h4>Slide {{$index}} </h4>
+          <h4>Slide {{$index}}</h4>
         </div>
       </slide>
     </carousel>

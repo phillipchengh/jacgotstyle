@@ -1,9 +1,10 @@
-var modal_controller = function($scope, $modalInstance, $document, photos) {
+var modal_controller = function($scope, $modalInstance, $document, photos, start) {
   $scope.slides = photos;
+  console.log('start: ' + start);
 
   $modalInstance.opened
   .then(function() {
-    $document.bind('keydown', function(e) {
+    $document.bind('keydown.jacatucla', function(e) {
       switch (e.keyCode) {
         case 37: $('.left.carousel-control').click(); break;
         case 39: $('.right.carousel-control').click(); break;
@@ -17,7 +18,7 @@ angular.module('jacatucla')
 
   var album_id = $routeParams.album_id;
 
-  $scope.open_slider = function() {
+  $scope.open_slider = function(index) {
     var modal = $modal.open({
       templateUrl: 'carousel.html',
       controller: modal_controller,
@@ -25,6 +26,9 @@ angular.module('jacatucla')
       resolve: {
         photos: function() {
           return $scope.photos;
+        },
+        start: function() {
+          return index; 
         }
       }
     });
@@ -32,7 +36,7 @@ angular.module('jacatucla')
     modal.result.then(function(selected_item) {
 
     }, function() {
-      $document.unbind('keydown');
+      $document.unbind('keydown.jacatucla');
     });
   };
   

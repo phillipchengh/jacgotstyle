@@ -2787,8 +2787,8 @@ Using these styles for posts since previous posts used this theme.
 .carousel-image {
   margin: auto;
 }
-.carousel-window {
-  background-color: black;
+.carousel-indicators {
+  display: none;
 }
 .modal-content {
   background-color: black;
