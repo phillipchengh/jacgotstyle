@@ -2,8 +2,15 @@
   text-align: center;
 }
 
-.thumbnail-wrapper {
+.album-wrapper {
   display: inline-block;
+}
+
+.thumbnail-wrapper {
+  background-color: black;
+  display: inline-block;
+  height: @thumbnail-height;
+  width: @thumbnail-width;
 }
 
 .thumbnail-text {
@@ -25,6 +32,14 @@
   display: none;
 }
 
+.modal-dialog {
+  width: @modal-dialog-width;  
+}
+
 .modal-content {
   background-color: black;
+}
+
+.modal-backdrop.in {
+  opacity: @modal-opacity;
 }

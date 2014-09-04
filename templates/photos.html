@@ -1,10 +1,12 @@
 <div class="photos-wrapper">
   <h1>JAC has {{albums.length}} albums!</h1>
   <span ng-repeat="album in albums">
-    <div class="thumbnail-wrapper">
-      <a ng-href="{{BASE_PATH}}/photoset?album_id={{album.gphoto$id.$t}}">
-        <img ng-src="{{album.media$group.media$thumbnail[0].url}}"></img>
-      </a>
+    <div class="album-wrapper">
+      <div class="thumbnail-wrapper">
+        <a ng-href="{{BASE_PATH}}/photoset?album_id={{album.gphoto$id.$t}}">
+          <img ng-src="{{album.media$group.media$thumbnail[0].url}}"></img>
+        </a>
+      </div>
       <div class="thumbnail-text">{{album.title.$t}}</div>
       <div class="thumbnail-text">{{album.gphoto$numphotos.$t}} photos</div>
     </div>

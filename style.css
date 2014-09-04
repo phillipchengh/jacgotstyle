@@ -2772,8 +2772,14 @@ Using these styles for posts since previous posts used this theme.
 .photos-wrapper {
   text-align: center;
 }
-.thumbnail-wrapper {
+.album-wrapper {
   display: inline-block;
+}
+.thumbnail-wrapper {
+  background-color: black;
+  display: inline-block;
+  height: 160px;
+  width: 160px;
 }
 .thumbnail-text {
   overflow: hidden;
@@ -2790,6 +2796,12 @@ Using these styles for posts since previous posts used this theme.
 .carousel-indicators {
   display: none;
 }
+.modal-dialog {
+  width: 992px;
+}
 .modal-content {
   background-color: black;
+}
+.modal-backdrop.in {
+  opacity: 0.9;
 }
