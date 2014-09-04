@@ -1,6 +1,5 @@
 var modal_controller = function($scope, $modalInstance, $document, $timeout, photos, start) {
   $scope.slides = photos;
-  console.log('start: ' + start);
 
   $modalInstance.opened
   .then(function() {
