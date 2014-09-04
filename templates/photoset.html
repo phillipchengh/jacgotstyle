@@ -15,7 +15,7 @@
       <slide ng-repeat="slide in slides" active="slide.active">
         <img class="carousel-image" ng-src="{{slide.content.src}}">
         <div class="carousel-caption">
-          <h4>Slide {{$index}}</h4>
+        <h4>{{$index+1}} of {{slides.length}}</h4>
         </div>
       </slide>
     </carousel>
