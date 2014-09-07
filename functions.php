@@ -109,6 +109,86 @@ function jacgotstylescripts_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'jacgotstylescripts_styles' );
 
+if ( ! function_exists( 'jacatucla_paging_nav' ) ) :
+/**
+ * Display navigation to next/previous set of posts when applicable.
+ *
+ */
+function jacatucla_paging_nav() {
+	// Don't print empty markup if there's only one page.
+	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+		return;
+	}
+
+	$paged        = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
+	$pagenum_link = html_entity_decode( get_pagenum_link() );
+	$query_args   = array();
+	$url_parts    = explode( '?', $pagenum_link );
+
+	if ( isset( $url_parts[1] ) ) {
+		wp_parse_str( $url_parts[1], $query_args );
+	}
+
+	$pagenum_link = remove_query_arg( array_keys( $query_args ), $pagenum_link );
+	$pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
+
+	$format  = $GLOBALS['wp_rewrite']->using_index_permalinks() && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
+	$format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
+
+	// Set up paginated links.
+	$links = paginate_links( array(
+		'base'     => $pagenum_link,
+		'format'   => $format,
+		'total'    => $GLOBALS['wp_query']->max_num_pages,
+		'current'  => $paged,
+		'mid_size' => 0,
+    'end_size' => 0,
+		'add_args' => array_map( 'urlencode', $query_args ),
+		'prev_text' => __( '&larr; Previous', 'jacgotstyle' ),
+		'next_text' => __( 'Next &rarr;', 'jacgotstyle' ),
+	) );
+
+	if ( $links ) :
+
+	?>
+	<nav class="navigation paging-navigation" role="navigation">
+		<div class="pagination loop-pagination">
+			<?php echo $links; ?>
+		</div><!-- .pagination -->
+	</nav><!-- .navigation -->
+	<?php
+	endif;
+}
+endif;
+
+if ( ! function_exists( 'jacatucla_post_nav' ) ) :
+/**
+ * Display navigation to next/previous post when applicable.
+*
+*/
+function jacatucla_post_nav() {
+	global $post;
+
+	// Don't print empty markup if there's nowhere to navigate.
+	$previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
+	$next     = get_adjacent_post( false, '', false );
+
+	if ( ! $next && ! $previous )
+		return;
+	?>
+	<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'twentythirteen' ); ?></h1>
+		<div class="nav-links">
+
+			<?php previous_post_link( '%link', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'twentythirteen' ) ); ?>
+			<?php next_post_link( '%link', _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link', 'twentythirteen' ) ); ?>
+
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
+}
+endif;
+
 /**
  * Filter the page title.
  *

@@ -23,14 +23,9 @@ get_header(); ?>
     <div ng-view>
     </div>
     <noscript>
-      <div class="row">
-        <div class="col-12">
-          <button>Prev</button>
-          <button>Next</button>
-        </div>
-      </div>
-      <div class="row">
+    <div class="row">
       <?php
+        jacatucla_paging_nav();
         $posts = get_posts();
         foreach ( $posts as $post ) : 
           setup_postdata( $post );

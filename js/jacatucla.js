@@ -1,10 +1,18 @@
 var BASE_PATH = '/wordpress';
-var CONTENT_PATH = 'wp-content/themes/jacgotstyle/';
+var CONTENT_PATH = BASE_PATH + '/wp-content/themes/jacgotstyle/';
 
 var pages = [
   {
     name: 'Home',
     path: BASE_PATH + '/',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/blog.html',
+      controller: 'blog_controller'
+    }
+  },
+  {
+    name: 'Page',
+    path: BASE_PATH + '/page/:page_number',
     route: {
       templateUrl: CONTENT_PATH + 'templates/blog.html',
       controller: 'blog_controller'
@@ -49,11 +57,6 @@ angular.module('jacatucla', ['ngRoute', 'ui.bootstrap'])
   });
 })
 .run(function() {
-  // $routeProvider.otherwise({
-  //   redirectTo: '/'
-  // });
-
-  // $http.get('/')
 });
 
 /*
@@ -1719,36 +1722,21 @@ angular.module("template/modal/window.html", []).run(["$templateCache", function
 }]);
 
 angular.module('jacatucla')
-.controller('blog_controller', function($scope, $sce, jac_services) {
+.controller('blog_controller', function($scope, $sce, $routeParams, jac_services, BASE_PATH) {
   
-  $scope.index = 1;
+  $scope.index = ($routeParams.page_number) ? parseInt($routeParams.page_number, 10) : 1;
+  $scope.prev_index = $scope.index + 1;
+  $scope.next_index = $scope.index - 1;
+  $scope.prev_href = BASE_PATH + '/page/' + $scope.prev_index;
+  $scope.next_href = ($scope.next_index > 1) ? (BASE_PATH + '/page/' + $scope.next_index) : (BASE_PATH + '/');
 
   jac_services.get_posts($scope.index)
-  .then(function(response) {
-    $scope.posts = response.data;
+  .success(function(response, status, headers, config) {
+    $scope.posts = response;
+    $scope.max_pages = headers('X-WP-Total');
+  })
+  .then(function(response, status, headers, config) {
   });
-
-  $scope.prev_posts = function() {
-    jac_services.get_posts($scope.index+1)
-    .then(function(response) {
-      if (response.data.length === 0) {
-        return;
-      }
-      $scope.posts = response.data;
-      $scope.index++;
-    });
-  };
-
-  $scope.next_posts = function() {
-    if ($scope.index === 1) {
-      return;
-    }
-    $scope.index--;
-    jac_services.get_posts($scope.index) 
-    .then(function(response) {
-      $scope.posts = response.data;
-    });
-  };
 
 });
 
@@ -1860,15 +1848,15 @@ angular.module('jacatucla')
 });
 
 angular.module('jacatucla')
-.factory('jac_services', function($http) {
+.factory('jac_services', function($http, BASE_PATH) {
   var jac_services = {};
 
-  jac_services.get_site_info = $http({method: 'GET', url: 'wp-json/'});
+  jac_services.get_site_info = $http({method: 'GET', url: BASE_PATH + '/wp-json/'});
 
-  jac_services.get_pages = $http({method: 'GET', url: 'wp-json/pages', params: {'filter[orderby]': 'menu_order', 'filter[order]': 'asc' }});
+  jac_services.get_pages = $http({method: 'GET', url: BASE_PATH + '/wp-json/pages', params: {'filter[orderby]': 'menu_order', 'filter[order]': 'asc' }});
   
   jac_services.get_posts = function(index) {
-    return $http({method: 'GET', url: 'wp-json/posts', params: {'page': index}});
+    return $http({method: 'GET', url: BASE_PATH + '/wp-json/posts', params: {'page': index}});
   };
 
   jac_services.get_albums = $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001', params: {'alt': 'json'}});

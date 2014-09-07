@@ -1,8 +1,16 @@
 <!-- title, date, categories, author, content, leave comment -->
 <div class="row">
   <div class="col-12">
-    <button ng-click="prev_posts()">Prev</button>
-    <button ng-click="next_posts()">Next</button>
+    <span ng-show="index < max_pages">
+      <a ng-href="{{prev_href}}">
+        <button>Prev</button>
+      </a>
+    </span>
+    <span ng-show="index <= max_pages && index > 1">
+      <a ng-href="{{next_href}}">
+        <button>Next</button>
+      </a>
+    </span>
   </div>
 </div>
 <div class="row">

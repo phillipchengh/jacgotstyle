@@ -1,13 +1,13 @@
 angular.module('jacatucla')
-.factory('jac_services', function($http) {
+.factory('jac_services', function($http, BASE_PATH) {
   var jac_services = {};
 
-  jac_services.get_site_info = $http({method: 'GET', url: 'wp-json/'});
+  jac_services.get_site_info = $http({method: 'GET', url: BASE_PATH + '/wp-json/'});
 
-  jac_services.get_pages = $http({method: 'GET', url: 'wp-json/pages', params: {'filter[orderby]': 'menu_order', 'filter[order]': 'asc' }});
+  jac_services.get_pages = $http({method: 'GET', url: BASE_PATH + '/wp-json/pages', params: {'filter[orderby]': 'menu_order', 'filter[order]': 'asc' }});
   
   jac_services.get_posts = function(index) {
-    return $http({method: 'GET', url: 'wp-json/posts', params: {'page': index}});
+    return $http({method: 'GET', url: BASE_PATH + '/wp-json/posts', params: {'page': index}});
   };
 
   jac_services.get_albums = $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001', params: {'alt': 'json'}});
