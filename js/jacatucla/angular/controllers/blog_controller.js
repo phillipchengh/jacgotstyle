@@ -1,5 +1,5 @@
 angular.module('jacatucla')
-.controller('blog_controller', function($scope, $sce, $routeParams, jac_services, BASE_PATH) {
+.controller('blog_controller', function($scope, $routeParams, jac_services, BASE_PATH) {
   
   $scope.index = ($routeParams.page_number) ? parseInt($routeParams.page_number, 10) : 1;
   $scope.prev_index = $scope.index + 1;

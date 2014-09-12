@@ -19,6 +19,22 @@ var pages = [
     }
   },
   {
+    name: 'Archives',
+    path: BASE_PATH + '/20:year/:month',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/archives.html',
+      controller: 'archives_controller'
+    }
+  },
+  {
+    name: 'Archives Page',
+    path: BASE_PATH + '/20:year/:month/page/:page_number',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/archives.html',
+      controller: 'archives_controller'
+    } 
+  },
+  {
     name: 'About',
     path: BASE_PATH + '/about',
     route: {
@@ -1722,7 +1738,26 @@ angular.module("template/modal/window.html", []).run(["$templateCache", function
 }]);
 
 angular.module('jacatucla')
-.controller('blog_controller', function($scope, $sce, $routeParams, jac_services, BASE_PATH) {
+.controller('archives_controller', function($scope, $routeParams, jac_services, BASE_PATH) {
+
+  var BASE_ARCHIVE_PATH = BASE_PATH + '/20' + $routeParams.year + '/' + $routeParams.month;
+  $scope.index = ($routeParams.page_number) ? parseInt($routeParams.page_number, 10) : 1;
+  $scope.prev_index = $scope.index + 1;
+  $scope.next_index = $scope.index - 1;
+  $scope.prev_href =  BASE_ARCHIVE_PATH + '/page/' + $scope.prev_index;
+  $scope.next_href = ($scope.next_index > 1) ? (BASE_ARCHIVE_PATH + '/page/' + $scope.next_index) : (BASE_ARCHIVE_PATH + '/');
+
+  jac_services.get_archives($routeParams.month, '20' + $routeParams.year, $scope.index)
+  .success(function(response, status, headers, config) {
+    $scope.posts = response;
+    $scope.max_pages = headers('X-WP-Total');
+  })
+  .then(function(response, status, headers, config) {
+  });
+});
+
+angular.module('jacatucla')
+.controller('blog_controller', function($scope, $routeParams, jac_services, BASE_PATH) {
   
   $scope.index = ($routeParams.page_number) ? parseInt($routeParams.page_number, 10) : 1;
   $scope.prev_index = $scope.index + 1;
@@ -1807,6 +1842,11 @@ angular.module('jacatucla')
 });
 
 angular.module('jacatucla')
+.controller('sidebar_controller', function($scope) {
+  console.log('sidebar_controller!');
+});
+
+angular.module('jacatucla')
 .controller('site_controller', function($scope, jac_services) {
 
   jac_services.get_site_info
@@ -1826,7 +1866,8 @@ angular.module('jacatucla')
 angular.module('jacatucla')
 .directive('jacSidebar', function(CONTENT_PATH) {
   return {
-    templateUrl: CONTENT_PATH + 'templates/sidebar.php'
+    templateUrl: CONTENT_PATH + 'templates/sidebar.php',
+    controller: 'sidebar_controller'
   };
 });
 
@@ -1857,6 +1898,10 @@ angular.module('jacatucla')
   
   jac_services.get_posts = function(index) {
     return $http({method: 'GET', url: BASE_PATH + '/wp-json/posts', params: {'page': index}});
+  };
+
+  jac_services.get_archives = function(month, year, index) {
+    return $http({method: 'GET', url: BASE_PATH + '/wp-json/posts', params: {'filter[monthnum]': month, 'filter[year]': year, 'page': index}});
   };
 
   jac_services.get_albums = $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001', params: {'alt': 'json'}});

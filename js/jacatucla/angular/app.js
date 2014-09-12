@@ -19,6 +19,22 @@ var pages = [
     }
   },
   {
+    name: 'Archives',
+    path: BASE_PATH + '/20:year/:month',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/archives.html',
+      controller: 'archives_controller'
+    }
+  },
+  {
+    name: 'Archives Page',
+    path: BASE_PATH + '/20:year/:month/page/:page_number',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/archives.html',
+      controller: 'archives_controller'
+    } 
+  },
+  {
     name: 'About',
     path: BASE_PATH + '/about',
     route: {
