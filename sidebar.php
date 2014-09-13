@@ -1,5 +1,6 @@
 <div ng-controller="sidebar_controller">
-  <select>
+  <select ng-model="archive" ng-change="go_to_archive()">
+    <option value="" disabled selected>Archives</option>
     <?php
       wp_get_archives(array('format' => 'option'));
     ?>
