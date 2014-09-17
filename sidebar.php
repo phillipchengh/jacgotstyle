@@ -1,10 +1,4 @@
 <div ng-controller="sidebar_controller">
-  <select ng-model="archive" ng-change="go_to_archive()">
-    <option value="" disabled selected>Archives</option>
-    <?php
-      wp_get_archives(array('format' => 'option'));
-    ?>
-  </select>
   <?php 
     // Get the jac_menu. This is registered in functions.php and managed in wp-admin.
     $menu_name = 'jac_menu';
@@ -24,4 +18,10 @@
      endforeach; 
     }
   ?>
+  <select ng-model="archive" ng-change="go_to_archive()">
+    <option value="" disabled selected>Archives</option>
+    <?php
+      wp_get_archives(array('format' => 'option'));
+    ?>
+  </select>
 </div>

@@ -99,9 +99,9 @@ function jacgotstylescripts_styles() {
   wp_register_script( 'jacatucla', get_template_directory_uri() . '/js/jacatucla.js', array( 'angular', 'angular-route' ), null, false );
   
   // Enqueue angular.
-  wp_enqueue_script( 'jQuery' );
   wp_enqueue_script( 'angular' );
   wp_enqueue_script( 'angular-route' );
+  wp_enqueue_script( 'jQuery' );
 
   // Enqueue our main javascript.
   wp_enqueue_script( 'jacatucla' );

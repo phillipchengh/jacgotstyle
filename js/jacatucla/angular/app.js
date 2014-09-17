@@ -56,6 +56,14 @@ var pages = [
       templateUrl: CONTENT_PATH + 'templates/photoset.html',
       controller: 'photoset_controller'
     }
+  },
+  {
+    name: 'Officers',
+    path: BASE_PATH + '/officers',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/officers.html',
+      controller: 'officers_controller'
+    }
   }
 ];
 
