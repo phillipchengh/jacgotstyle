@@ -42,6 +42,13 @@ var pages = [
     }
   },
   {
+    name: 'Fresh Produce',
+    path: BASE_PATH + '/fresh-produce',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/freshproduce.html'
+    }
+  },
+  {
     name: 'Photos',
     path: BASE_PATH + '/photos',
     route: {
