@@ -71,6 +71,13 @@ var pages = [
       templateUrl: CONTENT_PATH + 'templates/officers.html',
       controller: 'officers_controller'
     }
+  },
+  {
+    name: 'Contact',
+    path: BASE_PATH + '/contact',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/contact.html'
+    }
   }
 ];
 
