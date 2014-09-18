@@ -2806,10 +2806,10 @@ Using these styles for posts since previous posts used this theme.
   opacity: 0.9;
 }
 .officers-wrapper {
-  margin: 0 auto;
   width: 95%;
+  margin: 0 auto;
 }
-.officer-wrapper {
+.officer-mason {
   padding: 10px;
   text-align: center;
 }
