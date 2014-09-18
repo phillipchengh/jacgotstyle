@@ -2841,6 +2841,9 @@ Using these styles for posts since previous posts used this theme.
 .officer-img {
   width: 100%;
 }
+.officer-title {
+  font-weight: bold;
+}
 .officer-description {
   padding: 4px;
   text-align: left;
