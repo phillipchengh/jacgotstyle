@@ -1,0 +1,23 @@
+.officers-wrapper {
+  margin: 0 auto;
+  width: @officers-wrapper-width;
+}
+
+.officer-wrapper {
+  padding: @officer-masonry-padding;
+  text-align: center;
+}
+
+.officer-img {
+  max-width: 100%;
+}
+
+.col-4-officer {
+  width: 100% / 3;
+
+  @media (max-width: @tablet-width) {
+    .col-4-officer {
+      width: 100%; 
+    }
+  }
+}
