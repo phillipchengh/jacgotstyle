@@ -1,6 +1,6 @@
 .officers-wrapper {
-  width: @officers-wrapper-width;
   margin: 0 auto;
+  width: @officers-wrapper-width;
 }
 
 .officer-mason {
@@ -8,16 +8,32 @@
   text-align: center;
 }
 
-.officer-img {
-  max-width: 100%;
+.officer-mason:last-of-type {
+  padding-right: @officer-mason-padding-value;
 }
 
-.col-4-officer {
-  width: 100% / 3;
+.officer-wrapper {
+  .box-shadow(@officer-mason-shadow);
+  .border-radius(@officer-radius);
+}
 
-  @media (max-width: @tablet-width) {
-    .col-4-officer {
-      width: 100%; 
-    }
-  }
+.officer-radius {
+  .border-radius(@officer-radius);
+}
+
+.officer-top-radius {
+  .border-radius(@officer-top-radius); 
+}
+
+.officer-bottom-radius {
+  .border-radius(@officer-bottom-radius); 
+}
+
+.officer-img {
+  width: 100%;
+}
+
+.officer-description {
+  padding: @officer-description-padding;
+  text-align: left;
 }

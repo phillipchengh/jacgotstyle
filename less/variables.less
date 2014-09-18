@@ -19,8 +19,16 @@
 @thumbnail-height: 160px;
 @thumbnail-width: 160px;
 
-@modal-dialog-width: 992px;
+@modal-dialog-width: @desktop-width;
 @modal-opacity: 0.9;
 
 @officers-wrapper-width: 95%;
-@officer-mason-padding: 10px;
+@officer-mason-padding-value: 20px;
+@officer-radius-value: 10px;
+@officer-mason-shadow: 0px 1px 2px 2px rgba(0,0,0,0.25);
+@officer-description-padding: 4px;
+
+@officer-mason-padding: 0px @officer-mason-padding-value @officer-mason-padding-value @officer-mason-padding-value;
+@officer-radius: @officer-radius-value @officer-radius-value @officer-radius-value @officer-radius-value;
+@officer-top-radius: @officer-radius-value @officer-radius-value 0px 0px;
+@officer-bottom-radius: 0px 0px @officer-radius-value @officer-radius-value;
