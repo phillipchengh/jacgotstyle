@@ -2064,6 +2064,9 @@ hr {
     margin: 0px 0px;
   }
 }
+.header-img {
+  width: 100%;
+}
 /**
 * grid
 */

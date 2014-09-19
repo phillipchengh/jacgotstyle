@@ -19,7 +19,7 @@ wp_head();
 <div class="row">
   <div class="col-12">
     <div class="header-wrapper">
-      HEADER
+      <img class="header-img" src="http://www.teamliquid.net/images/layout/banner.jpg"></img>
     </div>
   </div>
 </div>
