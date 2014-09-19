@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="jacatucla">
 <head>
+<title>Japanese Animation Club</title>
 <?php
 /**
  * The Header template for our theme
