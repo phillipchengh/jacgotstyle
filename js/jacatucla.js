@@ -1841,16 +1841,17 @@ var modal_controller = function($scope, $modalInstance, $document, $timeout, pho
 
   $modalInstance.opened
   .then(function() {
-    $document.bind('keydown.jacatucla', function(e) {
-      switch (e.keyCode) {
-        case 37: $('.left.carousel-control').click(); break;
-        case 39: $('.right.carousel-control').click(); break;
-      }
-    });
     $timeout(function() {
       $('.carousel-indicators').children().eq(start).click();
+      $(document).bind('keydown.jacatucla', function(e) {
+        switch (e.keyCode) {
+          case 37: angular.element($('.left.carousel-control')).triggerHandler('click'); break;
+          case 39: angular.element($('.right.carousel-control')).triggerHandler('click'); break;
+        }
+      });
     });
   });
+
  };
 
 angular.module('jacatucla')
@@ -1875,7 +1876,7 @@ angular.module('jacatucla')
 
     modal.result.then(function(selected_item) {
     }, function() {
-      $document.unbind('keydown.jacatucla');
+      $(document).unbind('keydown.jacatucla');
     });
   };
   
