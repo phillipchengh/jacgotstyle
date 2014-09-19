@@ -229,29 +229,28 @@ endif;
  * TODO?
  */
 
-/* function jacgotstylewidgets_init() { */
-/* function jacgotstylewidgets_init() { */
-/* 	register_sidebar( array( */
-/* 		'name'          => __( 'Main Widget Area', 'jacgotstyle' ), */
-/* 		'id'            => 'sidebar-1', */
-/* 		'description'   => __( 'Appears in the footer section of the site.', 'jacgotstyle' ), */
-/* 		'before_widget' => '<aside id="%1$s" class="widget %2$s">', */
-/* 		'after_widget'  => '</aside>', */
-/* 		'before_title'  => '<h3 class="widget-title">', */
-/* 		'after_title'   => '</h3>', */
-/* 	) ); */
+function jacgotstylewidgets_init() {
+		register_sidebar( array(
+		'name'          => __( 'Club Info', 'jacgotstyle' ),
+		'id'            => 'club-info',
+		'description'   => __( 'Shows club time and location.', 'jacgotstyle' ),
+		'before_widget' => '<div class="widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="widget-title">',
+		'after_title'   => '</div>',
+	) );
 
-/* 	register_sidebar( array( */
-/* 		'name'          => __( 'Secondary Widget Area', 'jacgotstyle' ), */
-/* 		'id'            => 'sidebar-2', */
-/* 		'description'   => __( 'Appears on posts and pages in the sidebar.', 'jacgotstyle' ), */
-/* 		'before_widget' => '<aside id="%1$s" class="widget %2$s">', */
-/* 		'after_widget'  => '</aside>', */
-/* 		'before_title'  => '<h3 class="widget-title">', */
-/* 		'after_title'   => '</h3>', */
-/* 	) ); */
-/* } */
-/* add_action( 'widgets_init', 'jacgotstylewidgets_init' ); */
+    register_sidebar( array(
+		'name'          => __( 'Sidebar Widgets', 'jacgotstyle' ),
+		'id'            => 'sidebar-widgets',
+		'description'   => __( 'Widgets to show on sidebar.', 'jacgotstyle' ),
+		'before_widget' => '<div class="widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="widget-title">',
+		'after_title'   => '</div>',
+	) );
+}
+add_action( 'widgets_init', 'jacgotstylewidgets_init' );
 
 /**
  * Enqueue Javascript postMessage handlers for the Customizer.

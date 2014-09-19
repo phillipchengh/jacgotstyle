@@ -1,4 +1,7 @@
 <div ng-controller="sidebar_controller">
+  <?php
+    dynamic_sidebar( 'club-info' );
+  ?>
   <?php 
     // Get the jac_menu. This is registered in functions.php and managed in wp-admin.
     $menu_name = 'jac_menu';
@@ -24,4 +27,7 @@
       wp_get_archives(array('format' => 'option'));
     ?>
   </select>
+  <?php
+    dynamic_sidebar( 'sidebar-widgets' );
+  ?>
 </div>
