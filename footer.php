@@ -12,7 +12,7 @@ wp_footer();
 <div class="row">
   <div class="col-12">
     <div class="footer-wrapper">
-      FOOTER
+ 	      &copy; 2014 Japanese Animation Club at UCLA
     </div>
   </div>
 </div>
