@@ -1,4 +1,4 @@
-<div ng-controller="sidebar_controller">
+<div class="sidebar-wrapper" ng-controller="sidebar_controller">
   <?php
     dynamic_sidebar( 'club-info' );
   ?>

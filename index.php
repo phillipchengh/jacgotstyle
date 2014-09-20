@@ -15,7 +15,7 @@
  */
 
 get_header(); ?>
-<div class="row">
+<div class="site-content-wrapper row">
   <div class="col-2">
     <?php get_sidebar(); ?>
   </div>

@@ -2064,6 +2064,9 @@ hr {
     margin: 0px 0px;
   }
 }
+.site-content-wrapper {
+  background-color: #99c5ea;
+}
 .header-img {
   width: 100%;
 }
@@ -2188,6 +2191,9 @@ hr {
   .col-12 {
     width: 100%;
   }
+}
+.sidebar-wrapper {
+  background-color: #f5b740;
 }
 /*
 Twenty Thirteen's editor styles for posts, modeled after the TinyMCE editor.
