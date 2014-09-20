@@ -764,6 +764,24 @@ table {
 /**
 * variables
 */
+/**
+* colors
+*/
+/**
+* grid
+*/
+/**
+* site
+*/
+/**
+* blog and archives
+*/
+/**
+* photos and photosets
+*/
+/**
+* officers
+*/
 /*!
  * Bootstrap v3.0.0
  *
@@ -2051,25 +2069,6 @@ hr {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-.site-wrapper {
-  margin: 50px 75px;
-}
-@media (max-width: 760px) {
-  .site-wrapper {
-    margin: 25px 25px;
-  }
-}
-@media (max-width: 480px) {
-  .site-wrapper {
-    margin: 0px 0px;
-  }
-}
-.site-content-wrapper {
-  background-color: #99c5ea;
-}
-.header-img {
-  width: 100%;
-}
 /**
 * grid
 */
@@ -2191,6 +2190,25 @@ hr {
   .col-12 {
     width: 100%;
   }
+}
+.site-wrapper {
+  margin: 50px 75px;
+}
+@media (max-width: 760px) {
+  .site-wrapper {
+    margin: 25px 25px;
+  }
+}
+@media (max-width: 480px) {
+  .site-wrapper {
+    margin: 0px 0px;
+  }
+}
+.site-content-wrapper {
+  background-color: #ffffff;
+}
+.header-img {
+  width: 100%;
 }
 .sidebar-wrapper {
   background-color: #f5b740;
@@ -2777,6 +2795,9 @@ Using these styles for posts since previous posts used this theme.
 .post .rtl.post-format-status > p:first-child:before {
   background: none;
   content: none;
+}
+.post-wrapper {
+  padding: 10px 50px;
 }
 .photos-wrapper {
   text-align: center;
