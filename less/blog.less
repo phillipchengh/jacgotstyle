@@ -2,6 +2,35 @@
   padding: @post-padding;
 }
 
+.post-header {
+  border-bottom: @post-header-border-bottom;
+}
+
+.post-date {
+  display: inline-block;
+  text-align: center;
+}
+
+.post-month {
+  background-color: @date-month-background-color;
+  border: @date-border;
+  .border-radius(@date-radius-top);
+  color: @date-month-color;
+  font-size: @date-month-font-size;
+  padding: @date-month-padding;
+  text-shadow: @date-month-text-shadow;
+}
+
+.post-day {
+  border: @date-border;
+  .border-radius(@date-radius-bottom);
+  color: @date-day-color;
+  font-size: @date-day-font-size;
+  padding: @date-day-padding;
+  text-shadow: @date-month-text-shadow;
+}
+
 .post-title {
   color: @post-title-color;
+  font-size: @post-title-size;
 }
