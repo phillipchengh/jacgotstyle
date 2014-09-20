@@ -22,7 +22,7 @@ var pages = [
     name: 'Archives',
     path: BASE_PATH + '/20:year/:month',
     route: {
-      templateUrl: CONTENT_PATH + 'templates/archives.html',
+      templateUrl: CONTENT_PATH + 'templates/blog.html',
       controller: 'archives_controller'
     }
   },
@@ -30,7 +30,7 @@ var pages = [
     name: 'Archives Page',
     path: BASE_PATH + '/20:year/:month/page/:page_number',
     route: {
-      templateUrl: CONTENT_PATH + 'templates/archives.html',
+      templateUrl: CONTENT_PATH + 'templates/blog.html',
       controller: 'archives_controller'
     } 
   },

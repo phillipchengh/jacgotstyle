@@ -774,6 +774,9 @@ table {
 * site
 */
 /**
+* sidebar
+*/
+/**
 * blog and archives
 */
 /**
@@ -2798,6 +2801,9 @@ Using these styles for posts since previous posts used this theme.
 }
 .post-wrapper {
   padding: 10px 50px;
+}
+.post-title {
+  color: #f5b740;
 }
 .photos-wrapper {
   text-align: center;
