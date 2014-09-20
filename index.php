@@ -20,7 +20,7 @@ get_header(); ?>
     <?php get_sidebar(); ?>
   </div>
   <div class="col-10">
-    <div ng-view>
+    <div ng-view class="view-animate">
     </div>
     <noscript>
     <div class="row">
