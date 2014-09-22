@@ -2807,11 +2807,12 @@ Using these styles for posts since previous posts used this theme.
 }
 .post-date {
   display: inline-block;
+  margin-right: 10px;
   text-align: center;
 }
 .post-month {
   background-color: #3287be;
-  border: 1px solid #3287be;
+  border: 2px solid #3287be;
   -webkit-border-radius: 4px 4px 0px 0px;
   border-radius: 4px 4px 0px 0px;
   background-clip: padding-box;
@@ -2821,7 +2822,7 @@ Using these styles for posts since previous posts used this theme.
   text-shadow: rgba(0, 0, 0, 0.25) 0px -1px 0px;
 }
 .post-day {
-  border: 1px solid #3287be;
+  border: 2px solid #3287be;
   -webkit-border-radius: 0px 0px 4px 4px;
   border-radius: 0px 0px 4px 4px;
   background-clip: padding-box;
@@ -2833,6 +2834,25 @@ Using these styles for posts since previous posts used this theme.
 .post-title {
   color: #f5b740;
   font-size: 48px;
+}
+.nav-button {
+  background-color: #dc5671;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  padding: 5px 20px;
+}
+.nav-button:hover {
+  background-color: #d32c4e;
+}
+.nav-href,
+.nav-href:hover,
+.nav-href:focus {
+  text-decoration: none;
+}
+.nav-arrow {
+  font-size: 16px;
+  vertical-align: 2px;
 }
 .photos-wrapper {
   text-align: center;

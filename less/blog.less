@@ -8,6 +8,7 @@
 
 .post-date {
   display: inline-block;
+  margin-right: @date-margin-right;
   text-align: center;
 }
 
@@ -33,4 +34,25 @@
 .post-title {
   color: @post-title-color;
   font-size: @post-title-size;
+}
+
+.nav-button {
+  background-color: @nav-button-background-color; 
+  border: @nav-button-border;
+  color: @nav-button-color;
+  font-size: @nav-button-font-size;
+  padding: @nav-button-padding;
+}
+
+.nav-button:hover {
+  background-color: darken(@nav-button-background-color, @nav-button-hover-dark);
+}
+
+.nav-href, .nav-href:hover, .nav-href:focus {
+  text-decoration: none;
+}
+
+.nav-arrow {
+  font-size: @nav-arrow-font-size;
+  vertical-align: @nav-vertical-align;  
 }
