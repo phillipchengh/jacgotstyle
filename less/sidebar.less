@@ -1,9 +1,22 @@
 .sidebar-wrapper {
-  background-color: @sidebar-color;
+  background-color: @sidebar-background-color;
 }
 
 .nav-wrapper {
+  background-color: @nav-background-color;
 }
 
 .nav-item-wrapper {
+  color: @nav-color;
+  display: inline-block;
+  padding: @nav-padding;
 }
+
+.nav-item-wrapper:hover, .nav-item-wrapper:focus {
+  background-color: darken(@nav-background-color, @nav-hover-dark); 
+}
+
+.nav-href, .nav-href:hover, .nav-href:focus {
+  text-decoration: none;
+}
+

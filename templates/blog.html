@@ -23,13 +23,13 @@
 <div class="row">
   <div class="col-12">
     <span ng-show="index < max_pages">
-      <a class="nav-href" ng-href="{{prev_href}}">
-        <button class="nav-button"><span class="glyphicon glyphicon-arrow-left nav-arrow"></span> Prev</button>
+      <a class="nav-button-href" ng-href="{{prev_href}}">
+        <button class="nav-button"><span class="glyphicon glyphicon-arrow-left nav-button-arrow"></span> Prev</button>
       </a>
     </span>
     <span ng-show="index <= max_pages && index > 1">
-      <a class="nav-href" ng-href="{{next_href}}">
-        <button class="nav-button">Next <span class="glyphicon glyphicon-arrow-right nav-arrow"></span></button>
+      <a class="nav-button-href" ng-href="{{next_href}}">
+        <button class="nav-button">Next <span class="glyphicon glyphicon-arrow-right nav-button-arrow"></span></button>
       </a>
     </span>
   </div>

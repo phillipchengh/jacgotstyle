@@ -2216,6 +2216,23 @@ hr {
 .sidebar-wrapper {
   background-color: #f5b740;
 }
+.nav-wrapper {
+  background-color: #f5b740;
+}
+.nav-item-wrapper {
+  color: #dc5671;
+  display: inline-block;
+  padding: 8px 16px;
+}
+.nav-item-wrapper:hover,
+.nav-item-wrapper:focus {
+  background-color: #f2a510;
+}
+.nav-href,
+.nav-href:hover,
+.nav-href:focus {
+  text-decoration: none;
+}
 /*
 Theme Name: Twenty Fourteen
 Description: Used to style the TinyMCE editor.
@@ -2799,12 +2816,12 @@ Description: Used to style the TinyMCE editor.
 .nav-button:hover {
   background-color: #NaNNaNNaN;
 }
-.nav-href,
-.nav-href:hover,
-.nav-href:focus {
+.nav-button-href,
+.nav-button-href:hover,
+.nav-button-href:focus {
   text-decoration: none;
 }
-.nav-arrow {
+.nav-button-arrow {
   font-size: 16px;
   vertical-align: 2px;
 }
