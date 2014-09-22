@@ -2217,8 +2217,8 @@ hr {
   background-color: #f5b740;
 }
 /*
-Twenty Thirteen's editor styles for posts, modeled after the TinyMCE editor.
-Using these styles for posts since previous posts used this theme.
+Theme Name: Twenty Fourteen
+Description: Used to style the TinyMCE editor.
  */
 /**
  * Table of Contents:
@@ -2232,22 +2232,60 @@ Using these styles for posts since previous posts used this theme.
  * 7.0 - Images
  * 8.0 - Galleries
  * 9.0 - Audio/Video
- * 10.0 - Post Formats
- * 11.0 - RTL
+ * 10.0 - RTL
  * ----------------------------------------------------------------------------
  */
 .post {
-  /* Audio */
+  /**
+	 * 1.0 Body
+	 * ----------------------------------------------------------------------------
+	 */
+  /**
+ * 2.0 Headings
+ * ----------------------------------------------------------------------------
+ */
+  /**
+ * 3.0 Text Elements
+ * ----------------------------------------------------------------------------
+ */
+  /**
+ * 4.0 Links
+ * ----------------------------------------------------------------------------
+ */
+  /**
+ * 5.0 Alignment
+ * ----------------------------------------------------------------------------
+ */
+  /**
+ * 6.0 Tables
+ * ----------------------------------------------------------------------------
+ */
+  /**
+ * 7.0 Images
+ * ----------------------------------------------------------------------------
+ */
+  /**
+ * 8.0 Gallery
+ * -----------------------------------------------------------------------------
+ */
+  /**
+ * 9.0 Audio/Video
+ * ----------------------------------------------------------------------------
+ */
+  /**
+ * 10.0 RTL
+ * ----------------------------------------------------------------------------
+ */
 }
 .post html .mceContentBody {
   font-size: 100%;
-  max-width: 604px;
+  max-width: 474px;
 }
 .post body {
-  color: #141412;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  color: #2b2b2b;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
   line-height: 1.5;
-  text-rendering: optimizeLegibility;
   vertical-align: baseline;
 }
 .post h1,
@@ -2257,85 +2295,88 @@ Using these styles for posts since previous posts used this theme.
 .post h5,
 .post h6 {
   clear: both;
-  font-family: Bitter, Georgia, serif;
-  line-height: 1.3;
+  font-weight: 700;
+  margin: 36px 0 12px;
 }
 .post h1 {
-  font-size: 48px;
-  margin: 33px 0;
+  font-size: 26px;
+  line-height: 1.3846153846;
 }
 .post h2 {
-  font-size: 30px;
-  margin: 25px 0;
+  font-size: 24px;
+  line-height: 1;
 }
 .post h3 {
   font-size: 22px;
-  margin: 22px 0;
+  line-height: 1.0909090909;
 }
 .post h4 {
   font-size: 20px;
-  margin: 25px 0;
+  line-height: 1.2;
 }
 .post h5 {
   font-size: 18px;
-  margin: 30px 0;
+  line-height: 1.3333333333;
 }
 .post h6 {
   font-size: 16px;
-  margin: 36px 0;
+  line-height: 1.5;
 }
-.post hr {
-  background: url(../images/dotted-line.png) repeat center top;
-  background-size: 4px 4px;
+.post h1:first-child,
+.post h2:first-child,
+.post h3:first-child,
+.post h4:first-child,
+.post h5:first-child,
+.post h6:first-child {
+  margin-top: 0;
+}
+.post address {
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.post abbr[title] {
+  border-bottom: 1px dotted #2b2b2b;
+  cursor: help;
+}
+.post b,
+.post strong {
+  font-weight: 700;
+}
+.post cite {
   border: 0;
-  height: 1px;
-  margin: 0 0 24px;
+}
+.post cite,
+.post dfn,
+.post em,
+.post i {
+  font-style: italic;
+}
+.post mark,
+.post ins {
+  background: #fff9c0;
+  border: 0;
+  color: inherit;
+  text-decoration: none;
 }
 .post p {
   margin: 0 0 24px;
 }
-.post ol,
-.post ul {
-  margin: 16px 0;
-  padding: 0 0 0 40px;
-}
-.post ul {
-  list-style-type: square;
-}
-.post ol {
-  list-style: decimal outside;
-}
-.post li > ul,
-.post li > ol {
-  margin: 0;
-}
-.post dl {
-  margin: 0 20px;
-}
-.post dt {
-  font-weight: bold;
-}
-.post dd {
-  margin: 0 0 20px;
-}
-.post strong {
-  font-weight: bold;
-}
 .post code,
 .post kbd,
-.post pre,
-.post samp {
+.post tt,
+.post var,
+.post samp,
+.post pre {
   font-family: monospace, serif;
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.6;
 }
 .post pre {
-  background: #f5f5f5;
-  color: #666;
-  font-family: monospace;
-  font-size: 14px;
-  margin: 20px 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  max-width: 100%;
   overflow: auto;
-  padding: 20px;
+  padding: 12px;
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -2352,121 +2393,161 @@ Using these styles for posts since previous posts used this theme.
   content: none;
 }
 .post blockquote {
-  font-size: 24px;
+  color: #767676;
+  font-size: 19px;
   font-style: italic;
   font-weight: 300;
-  margin: 24px 40px;
-}
-.post blockquote blockquote {
-  margin-right: 0;
+  line-height: 1.2631578947;
+  margin: 0 0 24px;
 }
 .post blockquote cite,
 .post blockquote small {
-  font-size: 14px;
-  font-weight: normal;
-  text-transform: uppercase;
+  color: #2b2b2b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
 }
-.post cite {
-  border-bottom: 0;
+.post blockquote em,
+.post blockquote i,
+.post blockquote cite {
+  font-style: normal;
 }
-.post abbr[title] {
-  border-bottom: 1px dotted;
+.post blockquote strong,
+.post blockquote b {
+  font-weight: 400;
 }
-.post address {
-  font-style: italic;
-  margin: 0 0 24px;
+.post small {
+  font-size: smaller;
 }
-.post del {
-  color: #333;
+.post big {
+  font-size: 125%;
 }
-.post ins {
-  background: #fff9c0;
-  border: none;
-  color: #333;
-  text-decoration: none;
-}
-.post sub,
-.post sup {
+.post sup,
+.post sub {
   font-size: 75%;
+  height: 0;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
 .post sup {
-  top: -0.5em;
+  bottom: 1ex;
 }
 .post sub {
-  bottom: -0.25em;
+  top: .5ex;
+}
+.post dl {
+  margin: 0 0 24px;
+}
+.post dt {
+  font-weight: bold;
+}
+.post dd {
+  margin: 0 0 24px;
+}
+.post ul,
+.post ol {
+  list-style: none;
+  margin: 0 0 24px 20px;
+  padding-left: 0;
+}
+.post ul {
+  list-style: disc;
+}
+.post ol {
+  list-style: decimal;
+}
+.post li > ul,
+.post li > ol {
+  margin: 0 0 0 20px;
+}
+.post del {
+  color: #767676;
+}
+.post hr {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 0;
+  height: 1px;
+  margin-bottom: 23px;
 }
 .post a {
-  color: #ca3c08;
+  color: #24890d;
   text-decoration: none;
 }
 .post a:visited {
-  color: #ac0404;
+  color: #24890d;
 }
 .post a:focus {
   outline: thin dotted;
 }
 .post a:active,
 .post a:hover {
-  color: #ea9629;
+  color: #41a62a;
   outline: 0;
-}
-.post a:hover {
-  text-decoration: underline;
 }
 .post .alignleft {
   float: left;
-  margin: 5px 20px 5px 0;
+  margin: 7px 24px 7px 0;
 }
 .post .alignright {
   float: right;
-  margin: 5px 0 5px 20px;
+  margin: 7px 0 7px 24px;
 }
 .post .aligncenter {
+  clear: both;
   display: block;
-  margin: 5px auto;
+  margin: 7px auto;
 }
-.post img.alignnone {
-  margin: 5px 0;
+.post blockquote.alignleft,
+.post blockquote.alignright {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 17px;
+  width: 50%;
 }
-.post table {
-  border-bottom: 1px solid #ededed;
-  border-collapse: collapse;
+.post blockquote.alignleft p,
+.post blockquote.alignright p {
+  margin-bottom: 17px;
+}
+.post .mceItemTable {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-width: 1px 0 0 1px;
+  border-collapse: separate;
   border-spacing: 0;
   font-size: 14px;
-  line-height: 2;
-  margin: 0 0 20px;
+  line-height: 1.2857142857;
+  margin-bottom: 24px;
   width: 100%;
 }
-.post caption,
-.post th,
-.post td {
-  font-weight: normal;
+.post .mceItemTable th,
+.post .mceItemTable caption {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-width: 0 1px 1px 0;
+  font-weight: 700;
+  padding: 8px;
   text-align: left;
-}
-.post caption {
-  font-size: 16px;
-  margin: 20px 0;
-}
-.post th {
-  font-weight: bold;
   text-transform: uppercase;
+  vertical-align: baseline;
 }
-.post td {
-  border-top: 1px solid #ededed;
-  padding: 6px 10px 6px 0;
+.post .mceItemTable td {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-width: 0 1px 1px 0;
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  padding: 8px;
+  vertical-align: baseline;
 }
 .post img {
   height: auto;
-  max-width: 100%;
+  max-width: 474px;
   vertical-align: middle;
 }
 .post .wp-caption {
   background: transparent;
   border: none;
-  margin: 0;
+  color: #767676;
+  margin: 0 0 24px 0;
+  max-width: 474px;
   padding: 0;
   text-align: left;
 }
@@ -2474,37 +2555,43 @@ Using these styles for posts since previous posts used this theme.
   padding: 0;
 }
 .post .wp-caption.alignleft {
-  margin: 5px 10px 5px 0;
+  margin: 7px 14px 7px 0;
 }
 .post .html5-captions .wp-caption.alignleft {
-  margin-right: 20px;
+  margin-right: 24px;
 }
 .post .wp-caption.alignright {
-  margin: 5px 0 5px 10px;
+  margin: 7px 0 7px 14px;
 }
 .post .wp-caption.alignright img,
 .post .wp-caption.alignright .wp-caption-dd {
   padding-left: 10px;
 }
 .post .html5-captions .wp-caption.alignright {
-  margin-left: 20px;
+  margin-left: 24px;
 }
 .post .html5-captions .wp-caption.alignright img,
 .post .html5-captions .wp-caption.alignright .wp-caption-dd {
   padding: 0;
+}
+.post .wp-caption.aligncenter {
+  margin: 7px 0;
 }
 .post .wp-caption-dt {
   margin: 0;
 }
 .post .wp-caption .wp-caption-text,
 .post .wp-caption-dd {
-  color: #220e10;
-  font-size: 18px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 12px;
   font-style: italic;
-  font-weight: 300;
   line-height: 1.5;
-  margin-bottom: 24px;
-  padding: 0;
+  margin: 9px 0;
+  padding: 0 10px 0 0;
+  /* Avoid the caption to overflow the width of the image because wp-caption has 10px wider width */
+  text-align: left;
 }
 .post .mceTemp + ul,
 .post .mceTemp + ol {
@@ -2590,33 +2677,33 @@ Using these styles for posts since previous posts used this theme.
 .post .gallery-columns-8 .gallery-item:nth-of-type(8n - 7),
 .post .gallery-columns-9 .gallery-item:nth-of-type(9n - 8) {
   margin-left: 12px;
+  /* Compensate for the default negative margin on .gallery, which can't be changed. */
 }
 .post .gallery .gallery-caption {
   background-color: rgba(0, 0, 0, 0.7);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #fff;
-  font-size: 14px;
-  line-height: 1.3;
+  font-size: 12px;
+  line-height: 1.5;
   margin: 0;
   max-height: 50%;
   opacity: 0;
-  padding: 2px 8px;
+  padding: 6px 8px;
   position: absolute;
   bottom: 0;
   left: 0;
   text-align: left;
-  -webkit-transition: opacity 400ms ease;
-  transition: opacity 400ms ease;
   width: 100%;
 }
 .post .gallery .gallery-caption:before {
-  box-shadow: 0 -10px 15px #000000 inset;
   content: "";
   height: 100%;
   min-height: 49px;
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
 }
 .post .gallery-item:hover .gallery-caption {
@@ -2629,149 +2716,26 @@ Using these styles for posts since previous posts used this theme.
 }
 .post .mejs-mediaelement,
 .post .mejs-container .mejs-controls {
-  background: #220e10;
+  background: #000;
 }
 .post .mejs-controls .mejs-time-rail .mejs-time-loaded,
 .post .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
   background: #fff;
 }
 .post .mejs-controls .mejs-time-rail .mejs-time-current {
-  background: #ea9629;
+  background: #24890d;
 }
 .post .mejs-controls .mejs-time-rail .mejs-time-total,
 .post .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
-  background: #595959;
+  background: rgba(255, 255, 255, 0.33);
 }
 .post .mejs-controls .mejs-time-rail span,
 .post .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
 .post .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
   border-radius: 0;
 }
-.post .post-format-aside {
-  background-color: #f7f5e7;
-}
-.post .post-format-aside blockquote {
-  font-size: 100%;
-  font-weight: normal;
-}
-.post .post-format-aside cite {
-  font-size: 100%;
-  text-transform: none;
-}
-.post .post-format-aside cite:before {
-  content: "\2014";
-  margin-right: 5px;
-}
-.post .post-format-audio {
-  background-color: #db572f;
-}
-.post .post-format-audio a {
-  color: #fbfaf3;
-}
-.post .post-format-audio:before {
-  background: url(../images/dotted-line.png) repeat-y 85px 0;
-  background-size: 4px 4px;
-  content: "\f109";
-  display: block;
-  float: left;
-  font-family: Genericons;
-  font-size: 64px;
-  -webkit-font-smoothing: antialiased;
-  height: 100%;
-  line-height: 1;
-  width: 120px;
-}
-.post .post-format-chat {
-  background-color: #eadaa6;
-}
-.post .post-format-chat a {
-  color: #722d19;
-}
-.post .post-format-gallery {
-  background-color: #fbca3c;
-}
-.post .post-format-gallery a {
-  color: #722d19;
-}
-.post .post-format-link {
-  background-color: #f7f5e7;
-}
-.post .post-format-quote {
-  background-color: #210d10;
-  color: #f7f5e7;
-}
-.post .post-format-quote a {
-  color: #e63f2a;
-}
-.post .post-format-quote blockquote {
-  font-size: 28px;
-  font-style: italic;
-  font-weight: 300;
-  margin: 0;
-  padding-left: 75px;
-  position: relative;
-}
-.post .post-format-quote blockquote:before {
-  content: '\201C';
-  font-size: 140px;
-  font-weight: 400;
-  line-height: .8;
-  padding-right: 25px;
-  position: absolute;
-  left: -15px;
-  top: -3px;
-}
-.post .post-format-quote blockquote small,
-.post .post-format-quote blockquote cite {
-  display: block;
-  font-size: 16px;
-}
-.post .format-quote .entry-content cite a {
-  border-bottom: 1px dotted #fff;
-  color: #fff;
-}
-.post .format-quote .entry-content cite a:hover {
-  text-decoration: none;
-}
-.post .post-format-status {
-  background-color: #722d19;
-  color: #f7f5e7;
-  font-style: italic;
-  font-weight: 300;
-  padding: 0;
-  padding-left: 35px;
-}
-.post .post-format-status.mceContentBody {
-  font-size: 24px;
-}
-.post .post-format-status:before {
-  background: url(../images/dotted-line.png) repeat-y left bottom;
-  background-size: 4px 4px;
-  content: "";
-  display: block;
-  float: left;
-  height: 100%;
-  position: relative;
-  left: -30px;
-  width: 1px;
-}
-.post .post-format-status > p:first-child:before {
-  background-color: rgba(0, 0, 0, 0.65);
-  content: "";
-  height: 3px;
-  width: 13px;
-  margin-top: 13px;
-  position: absolute;
-  left: 9px;
-}
-.post .post-format-status a {
-  color: #eadaa6;
-}
-.post .post-format-video {
-  background-color: #db572f;
-}
-.post .post-format-video a {
-  color: #fbfaf3;
+.post .mejs-overlay-loading {
+  background: transparent;
 }
 .post html .mceContentBody.rtl {
   direction: rtl;
@@ -2779,25 +2743,15 @@ Using these styles for posts since previous posts used this theme.
 }
 .post .rtl ol,
 .post .rtl ul {
-  padding: 0 40px 0 0;
+  margin-left: 0;
+  margin-right: 24px;
 }
 .post .rtl .wp-caption,
 .post .rtl tr th {
   text-align: right;
 }
 .post .rtl td {
-  padding: 6px 0 6px 10px;
   text-align: right;
-}
-.post .rtl blockquote blockquote {
-  margin-left: 0;
-  margin-right: 24px;
-}
-.post .rtl.post-format-audio:before,
-.post .rtl.post-format-status:before,
-.post .rtl.post-format-status > p:first-child:before {
-  background: none;
-  content: none;
 }
 .post-wrapper {
   padding: 10px 50px;
@@ -2843,7 +2797,7 @@ Using these styles for posts since previous posts used this theme.
   padding: 5px 20px;
 }
 .nav-button:hover {
-  background-color: #d32c4e;
+  background-color: #NaNNaNNaN;
 }
 .nav-href,
 .nav-href:hover,
