@@ -1,13 +1,20 @@
 <div class="sidebar-wrapper" ng-controller="sidebar_controller">
+  <div class="sidebar-title">
+    Club Info
+  </div>
   <?php
     dynamic_sidebar( 'club-info' );
   ?>
-  <select ng-model="archive" ng-change="go_to_archive()">
-  <option value="" disabled selected>Archives</option>
+  <div class="sidebar-title">
+    Archives
+  </div>
   <?php
-    wp_get_archives(array('format' => 'option'));
+    wp_get_archives( array(
+      'format' => 'custom',
+      'before' => '<div>',
+      'after' => '</div>'
+    ) );
   ?>
-  </select>
   <?php
     dynamic_sidebar( 'sidebar-widgets' );
   ?>

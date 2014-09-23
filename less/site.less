@@ -1,12 +1,16 @@
 .site-wrapper {
-  margin: @desktop-margin-y @desktop-margin-x;
+  margin: @site-margin;
+
+  @media (max-width: @desktop-width) {
+    margin: @site-desktop-margin;
+  }
 
   @media (max-width: @tablet-width) {
-    margin: @tablet-margin-y @tablet-margin-x;
+    margin: @site-tablet-margin;
   }
 
   @media (max-width: @mobile-width) {
-    margin: @mobile-margin-y @mobile-margin-x;
+    margin: @site-mobile-margin;
   }
 }
 

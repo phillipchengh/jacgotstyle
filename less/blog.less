@@ -1,5 +1,18 @@
 .post-wrapper {
   padding: @post-padding;
+
+  @media (max-width: @desktop-width) {
+    padding: @post-desktop-padding;
+  }
+
+  @media (max-width: @tablet-width) {
+    padding: @post-tablet-padding;
+  }
+
+  @media (max-width: @mobile-width) {
+    padding: @post-mobile-padding;
+  }
+
 }
 
 .post-header {

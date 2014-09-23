@@ -21,10 +21,7 @@ get_header(); ?>
   </div>
 </div>
 <div class="site-content-wrapper row">
-  <div class="col-2">
-    <?php get_sidebar(); ?>
-  </div>
-  <div class="col-10">
+  <div class="col-9">
     <div ng-view class="view-animate">
     </div>
     <noscript>
@@ -48,6 +45,9 @@ get_header(); ?>
       ?>
     </div>
     </noscript>
+  </div>
+  <div class="col-3">
+    <?php get_sidebar(); ?>
   </div>
 </div>
 <?php get_footer(); ?>

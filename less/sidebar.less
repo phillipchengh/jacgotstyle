@@ -1,5 +1,19 @@
 .sidebar-wrapper {
   background-color: @sidebar-background-color;
+  padding: @sidebar-padding;
+
+  @media (max-width: @desktop-width) {
+    padding: @sidebar-desktop-padding;
+  }
+
+  @media (max-width: @tablet-width) {
+    padding: @sidebar-tablet-padding;
+  }
+
+  @media (max-width: @mobile-width) {
+    padding: @sidebar-mobile-padding;
+  }
+
 }
 
 .nav-wrapper {

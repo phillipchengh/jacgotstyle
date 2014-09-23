@@ -2101,6 +2101,11 @@ hr {
 .col-1 {
   width: 8.33333333%;
 }
+@media (max-width: 760px) {
+  .col-1 {
+    width: 100%;
+  }
+}
 @media (max-width: 480px) {
   .col-1 {
     width: 100%;
@@ -2108,6 +2113,11 @@ hr {
 }
 .col-2 {
   width: 16.66666667%;
+}
+@media (max-width: 760px) {
+  .col-2 {
+    width: 100%;
+  }
 }
 @media (max-width: 480px) {
   .col-2 {
@@ -2117,6 +2127,11 @@ hr {
 .col-3 {
   width: 25%;
 }
+@media (max-width: 760px) {
+  .col-3 {
+    width: 100%;
+  }
+}
 @media (max-width: 480px) {
   .col-3 {
     width: 100%;
@@ -2124,6 +2139,11 @@ hr {
 }
 .col-4 {
   width: 33.33333333%;
+}
+@media (max-width: 760px) {
+  .col-4 {
+    width: 100%;
+  }
 }
 @media (max-width: 480px) {
   .col-4 {
@@ -2133,6 +2153,11 @@ hr {
 .col-5 {
   width: 41.66666667%;
 }
+@media (max-width: 760px) {
+  .col-5 {
+    width: 100%;
+  }
+}
 @media (max-width: 480px) {
   .col-5 {
     width: 100%;
@@ -2140,6 +2165,11 @@ hr {
 }
 .col-6 {
   width: 50%;
+}
+@media (max-width: 760px) {
+  .col-6 {
+    width: 100%;
+  }
 }
 @media (max-width: 480px) {
   .col-6 {
@@ -2149,6 +2179,11 @@ hr {
 .col-7 {
   width: 58.33333333%;
 }
+@media (max-width: 760px) {
+  .col-7 {
+    width: 100%;
+  }
+}
 @media (max-width: 480px) {
   .col-7 {
     width: 100%;
@@ -2156,6 +2191,11 @@ hr {
 }
 .col-8 {
   width: 66.66666667%;
+}
+@media (max-width: 760px) {
+  .col-8 {
+    width: 100%;
+  }
 }
 @media (max-width: 480px) {
   .col-8 {
@@ -2165,6 +2205,11 @@ hr {
 .col-9 {
   width: 75%;
 }
+@media (max-width: 760px) {
+  .col-9 {
+    width: 100%;
+  }
+}
 @media (max-width: 480px) {
   .col-9 {
     width: 100%;
@@ -2172,6 +2217,11 @@ hr {
 }
 .col-10 {
   width: 83.33333333%;
+}
+@media (max-width: 760px) {
+  .col-10 {
+    width: 100%;
+  }
 }
 @media (max-width: 480px) {
   .col-10 {
@@ -2181,6 +2231,11 @@ hr {
 .col-11 {
   width: 91.66666667%;
 }
+@media (max-width: 760px) {
+  .col-11 {
+    width: 100%;
+  }
+}
 @media (max-width: 480px) {
   .col-11 {
     width: 100%;
@@ -2189,17 +2244,27 @@ hr {
 .col-12 {
   width: 100%;
 }
+@media (max-width: 760px) {
+  .col-12 {
+    width: 100%;
+  }
+}
 @media (max-width: 480px) {
   .col-12 {
     width: 100%;
   }
 }
 .site-wrapper {
-  margin: 50px 75px;
+  margin: 16px 50px;
+}
+@media (max-width: 992px) {
+  .site-wrapper {
+    margin: 0px 0px;
+  }
 }
 @media (max-width: 760px) {
   .site-wrapper {
-    margin: 25px 25px;
+    margin: 0px 0px;
   }
 }
 @media (max-width: 480px) {
@@ -2214,7 +2279,23 @@ hr {
   width: 100%;
 }
 .sidebar-wrapper {
-  background-color: #f5b740;
+  background-color: none;
+  padding: 0px 24px;
+}
+@media (max-width: 992px) {
+  .sidebar-wrapper {
+    padding: 0px 10px;
+  }
+}
+@media (max-width: 760px) {
+  .sidebar-wrapper {
+    padding: 0px 24px;
+  }
+}
+@media (max-width: 480px) {
+  .sidebar-wrapper {
+    padding: 0px 0px;
+  }
 }
 .nav-wrapper {
   background-color: #f5b740;
@@ -2776,6 +2857,21 @@ Description: Used to style the TinyMCE editor.
 .post-wrapper {
   padding: 10px 50px;
 }
+@media (max-width: 992px) {
+  .post-wrapper {
+    padding: 10px 24px;
+  }
+}
+@media (max-width: 760px) {
+  .post-wrapper {
+    padding: 10px 24px;
+  }
+}
+@media (max-width: 480px) {
+  .post-wrapper {
+    padding: 10px 24px;
+  }
+}
 .post-header {
   border-bottom: 1px solid #808080;
 }
@@ -2906,4 +3002,22 @@ Description: Used to style the TinyMCE editor.
 .officer-description {
   padding: 4px;
   text-align: left;
+}
+* {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+* * {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+* * * {
+  background-color: rgba(0, 0, 255, 0.2);
+}
+* * * * {
+  background-color: rgba(255, 0, 255, 0.2);
+}
+* * * * * {
+  background-color: rgba(0, 255, 255, 0.2);
+}
+* * * * * * {
+  background-color: rgba(255, 255, 0, 0.2);
 }
