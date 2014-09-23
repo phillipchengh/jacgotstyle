@@ -5,7 +5,7 @@ angular.module('jacatucla')
   });
 
   $scope.isActive = function(route) {
-    if ($route.current) {
+    if ($route.current && $route.current.data && $route.current.data.tab) {
       return (route === $route.current.data.tab);
     } else {
       return false;
