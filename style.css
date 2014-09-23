@@ -2280,6 +2280,7 @@ hr {
 }
 .sidebar-wrapper {
   background-color: none;
+  display: inline-block;
   padding: 0px 24px;
 }
 @media (max-width: 992px) {
@@ -2297,8 +2298,19 @@ hr {
     padding: 0px 0px;
   }
 }
+.widget-wrapper {
+  margin-bottom: 10px;
+}
+.widget-title {
+  background-color: #f5b740;
+  text-align: center;
+}
+.widget-content {
+  background-color: #fadca1;
+}
 .nav-wrapper {
   background-color: #f5b740;
+  margin-bottom: 10px;
 }
 .nav-href,
 .nav-href:hover,
@@ -3002,22 +3014,4 @@ Description: Used to style the TinyMCE editor.
 .officer-description {
   padding: 4px;
   text-align: left;
-}
-* {
-  background-color: rgba(255, 0, 0, 0.2);
-}
-* * {
-  background-color: rgba(0, 255, 0, 0.2);
-}
-* * * {
-  background-color: rgba(0, 0, 255, 0.2);
-}
-* * * * {
-  background-color: rgba(255, 0, 255, 0.2);
-}
-* * * * * {
-  background-color: rgba(0, 255, 255, 0.2);
-}
-* * * * * * {
-  background-color: rgba(255, 255, 0, 0.2);
 }

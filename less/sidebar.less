@@ -1,5 +1,6 @@
 .sidebar-wrapper {
   background-color: @sidebar-background-color;
+  display: inline-block;
   padding: @sidebar-padding;
 
   @media (max-width: @desktop-width) {
@@ -16,8 +17,22 @@
 
 }
 
+.widget-wrapper {
+  margin-bottom: @widget-margin-bottom;
+}
+
+.widget-title {
+  background-color: @widget-title-background-color;
+  text-align: center;
+}
+
+.widget-content {
+  background-color: @widget-content-background-color;
+}
+
 .nav-wrapper {
   background-color: @nav-background-color;
+  margin-bottom: @nav-margin-bottom;
 }
 
 .nav-href, .nav-href:hover, .nav-href:focus {
