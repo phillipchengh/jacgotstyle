@@ -6,6 +6,10 @@
   background-color: @nav-background-color;
 }
 
+.nav-href, .nav-href:hover, .nav-href:focus {
+  text-decoration: none;
+}
+
 .nav-item-wrapper {
   color: @nav-color;
   display: inline-block;
@@ -16,7 +20,6 @@
   background-color: darken(@nav-background-color, @nav-hover-dark); 
 }
 
-.nav-href, .nav-href:hover, .nav-href:focus {
-  text-decoration: none;
+.nav-item-wrapper.nav-active {
+  background-color: darken(@nav-background-color, @nav-hover-dark);
 }
-

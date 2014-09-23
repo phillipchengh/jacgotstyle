@@ -1,4 +1,4 @@
-<div class="nav-wrapper">
+<div class="nav-wrapper" ng-controller="nav_controller">
   <ul class="nav-items">
   <?php 
     // Get the jac_menu. This is registered in functions.php and managed in wp-admin.
@@ -10,11 +10,11 @@
         $url = $menu_item->url;
         $title = $menu_item->title;
   ?>
-    <a class="nav-href" href="<?= $url ?>">
-      <li class="nav-item-wrapper">
-        <?= $title ?>
-      </li>
-    </a>
+  <a class="nav-href" href="<?= $url ?>">
+    <li class="nav-item-wrapper" ng-class="{'nav-active': isActive('<?= $title ?>')}">
+      <?= $title ?>
+    </li>
+  </a>
   <?php
      endforeach; 
     }

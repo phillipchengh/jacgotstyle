@@ -2219,6 +2219,11 @@ hr {
 .nav-wrapper {
   background-color: #f5b740;
 }
+.nav-href,
+.nav-href:hover,
+.nav-href:focus {
+  text-decoration: none;
+}
 .nav-item-wrapper {
   color: #dc5671;
   display: inline-block;
@@ -2228,10 +2233,8 @@ hr {
 .nav-item-wrapper:focus {
   background-color: #f2a510;
 }
-.nav-href,
-.nav-href:hover,
-.nav-href:focus {
-  text-decoration: none;
+.nav-item-wrapper.nav-active {
+  background-color: #f2a510;
 }
 /*
 Theme Name: Twenty Fourteen
