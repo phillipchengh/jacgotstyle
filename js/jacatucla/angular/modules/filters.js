@@ -8,7 +8,7 @@ angular.module('jacatucla')
   return function(date_string) {
     var unix_time = new Date(date_string);
     var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    var month = months[unix_time.getMonth() - 1];
+    var month = months[unix_time.getMonth()];
     var day = unix_time.getDate();
     var year = unix_time.getFullYear();
     return month + ' ' + day + ', ' + year;
@@ -18,7 +18,7 @@ angular.module('jacatucla')
   return function(date_string) {
     var unix_time = new Date(date_string);
     var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    var month = months[unix_time.getMonth() - 1];
+    var month = months[unix_time.getMonth()];
     return month;
   };
 })
