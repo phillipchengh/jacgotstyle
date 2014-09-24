@@ -2254,6 +2254,10 @@ hr {
     width: 100%;
   }
 }
+a:hover,
+a:focus {
+  text-decoration: none;
+}
 .site-wrapper {
   margin: 16px 50px;
 }
@@ -2279,34 +2283,45 @@ hr {
   width: 100%;
 }
 .sidebar-wrapper {
-  background-color: none;
+  text-align: center;
+}
+.sidebar-container {
+  background-color: transparent;
   display: inline-block;
   padding: 0px 24px;
 }
 @media (max-width: 992px) {
-  .sidebar-wrapper {
+  .sidebar-container {
     padding: 0px 10px;
   }
 }
 @media (max-width: 760px) {
-  .sidebar-wrapper {
+  .sidebar-container {
     padding: 0px 24px;
   }
 }
 @media (max-width: 480px) {
-  .sidebar-wrapper {
+  .sidebar-container {
     padding: 0px 0px;
   }
 }
-.widget-wrapper {
+.widget {
   margin-bottom: 10px;
 }
 .widget-title {
   background-color: #f5b740;
-  text-align: center;
+  font-size: 18px;
+  padding: 4px 0px;
 }
 .widget-content {
   background-color: #fadca1;
+  padding: 12px 18px;
+}
+.widget-info-header {
+  font-size: 24px;
+}
+.widget-info-content {
+  padding-left: 4px;
 }
 .nav-wrapper {
   background-color: #f5b740;
@@ -2328,6 +2343,9 @@ hr {
 }
 .nav-item-wrapper.nav-active {
   background-color: #f2a510;
+}
+.archive-href {
+  font-size: 16px;
 }
 /*
 Theme Name: Twenty Fourteen

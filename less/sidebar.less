@@ -1,4 +1,8 @@
 .sidebar-wrapper {
+  text-align: center;
+}
+
+.sidebar-container {
   background-color: @sidebar-background-color;
   display: inline-block;
   padding: @sidebar-padding;
@@ -17,17 +21,27 @@
 
 }
 
-.widget-wrapper {
+.widget {
   margin-bottom: @widget-margin-bottom;
 }
 
 .widget-title {
   background-color: @widget-title-background-color;
-  text-align: center;
+  font-size: @widget-title-font-size;
+  padding: @widget-title-padding;
 }
 
 .widget-content {
   background-color: @widget-content-background-color;
+  padding: @widget-content-padding;
+}
+
+.widget-info-header {
+  font-size: @widget-info-header-font-size;
+}
+
+.widget-info-content {
+  padding-left: @widget-info-content-padding-left;
 }
 
 .nav-wrapper {
@@ -51,4 +65,8 @@
 
 .nav-item-wrapper.nav-active {
   background-color: darken(@nav-background-color, @nav-hover-dark);
+}
+
+.archive-href {
+  font-size: @archive-href-font-size;
 }
