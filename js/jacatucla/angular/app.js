@@ -108,6 +108,17 @@ var PAGES = [
         tab: 'Contact'
       }
     }
+  },
+  {
+    name: 'Post',
+    path: BASE_PATH + '/:name',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/blog.html',
+      controller: 'post_controller',
+      data: {
+        tab: 'Home'
+      }
+    }
   }
 ];
 
@@ -120,9 +131,9 @@ angular.module('jacatucla', ['ngRoute', 'ui.bootstrap'])
   for (var i = 0; i < PAGES.length; i++) {
     $routeProvider.when(PAGES[i].path, PAGES[i].route);  
   }
-  $routeProvider.otherwise({
-    redirectTo: BASE_PATH + '/'
-  });
+  // $routeProvider.otherwise({
+  //   redirectTo: BASE_PATH + '/'
+  // });
 })
 .run(function() {
 });

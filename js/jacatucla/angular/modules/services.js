@@ -14,6 +14,10 @@ angular.module('jacatucla')
     return $http({method: 'GET', url: BASE_PATH + '/wp-json/posts', params: {'filter[monthnum]': month, 'filter[year]': year, 'page': index}});
   };
 
+  jac_services.get_post = function(name) {
+    return $http({method: 'GET', url: BASE_PATH + '/wp-json/posts', params: {'filter[name]': name}});
+  };
+
   jac_services.get_albums = $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001', params: {'alt': 'json'}});
   
   jac_services.get_photos = function(album_id) {

@@ -108,6 +108,17 @@ var PAGES = [
         tab: 'Contact'
       }
     }
+  },
+  {
+    name: 'Post',
+    path: BASE_PATH + '/:name',
+    route: {
+      templateUrl: CONTENT_PATH + 'templates/blog.html',
+      controller: 'post_controller',
+      data: {
+        tab: 'Home'
+      }
+    }
   }
 ];
 
@@ -120,9 +131,9 @@ angular.module('jacatucla', ['ngRoute', 'ui.bootstrap'])
   for (var i = 0; i < PAGES.length; i++) {
     $routeProvider.when(PAGES[i].path, PAGES[i].route);  
   }
-  $routeProvider.otherwise({
-    redirectTo: BASE_PATH + '/'
-  });
+  // $routeProvider.otherwise({
+  //   redirectTo: BASE_PATH + '/'
+  // });
 })
 .run(function() {
 });
@@ -1938,6 +1949,18 @@ angular.module('jacatucla')
 });
 
 angular.module('jacatucla')
+.controller('post_controller', function($scope, $routeParams, jac_services, BASE_PATH) {
+ 
+  jac_services.get_post($routeParams.name)
+  .success(function(response, status, headers, config) {
+    $scope.posts = response;
+  })
+  .then(function(response, status, headers, config) {
+  });
+
+});
+
+angular.module('jacatucla')
 .controller('sidebar_controller', function($scope, $location) {
 
   $scope.go_to_archive = function() {
@@ -2009,6 +2032,10 @@ angular.module('jacatucla')
 
   jac_services.get_archives = function(month, year, index) {
     return $http({method: 'GET', url: BASE_PATH + '/wp-json/posts', params: {'filter[monthnum]': month, 'filter[year]': year, 'page': index}});
+  };
+
+  jac_services.get_post = function(name) {
+    return $http({method: 'GET', url: BASE_PATH + '/wp-json/posts', params: {'filter[name]': name}});
   };
 
   jac_services.get_albums = $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001', params: {'alt': 'json'}});
