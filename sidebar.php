@@ -3,5 +3,5 @@
     <?php
       dynamic_sidebar( 'club-info' );
     ?>
-  </div>
+    </div>
 </div>

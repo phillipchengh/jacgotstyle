@@ -2902,7 +2902,6 @@ Description: Used to style the TinyMCE editor.
 }
 .post-date {
   display: inline-block;
-  margin-right: 10px;
   text-align: center;
 }
 .post-month {
