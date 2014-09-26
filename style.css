@@ -2305,16 +2305,16 @@ a:focus {
     padding: 0px 0px;
   }
 }
-.widget {
-  margin-bottom: 10px;
-}
 .widget-title {
   background-color: #f5b740;
   font-size: 18px;
   padding: 4px 0px;
 }
-.widget-content {
+.widget-wrapper {
   background-color: #fadca1;
+  margin-bottom: 10px;
+}
+.widget-wrapper > ul {
   padding: 12px 18px;
 }
 .widget-info-header {
@@ -2323,14 +2323,12 @@ a:focus {
 .widget-info-content {
   padding-left: 4px;
 }
+.widget-wrapper > ul > li > a {
+  font-size: 16px;
+}
 .nav-wrapper {
   background-color: #f5b740;
   margin-bottom: 10px;
-}
-.nav-href,
-.nav-href:hover,
-.nav-href:focus {
-  text-decoration: none;
 }
 .nav-item-wrapper {
   color: #dc5671;
@@ -2343,9 +2341,6 @@ a:focus {
 }
 .nav-item-wrapper.nav-active {
   background-color: #f2a510;
-}
-.archive-href {
-  font-size: 16px;
 }
 /*
 Theme Name: Twenty Fourteen
