@@ -113,7 +113,7 @@ var PAGES = [
     name: 'Post',
     path: BASE_PATH + '/:name',
     route: {
-      templateUrl: CONTENT_PATH + 'templates/blog.html',
+      templateUrl: CONTENT_PATH + 'templates/post.html',
       controller: 'post_controller',
       data: {
         tab: 'Home'

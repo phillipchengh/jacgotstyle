@@ -15,6 +15,10 @@
 
 }
 
+.post-side {
+  text-align: right;
+}
+
 .post-header {
   margin-bottom: 10px;
 }
@@ -45,7 +49,20 @@
 
 .post-title {
   color: @post-title-color;
+  font-family: @post-title-font-family;
   font-size: @post-title-size;
+  font-weight: @post-title-font-weight;
+  line-height: @post-title-line-height;
+  letter-spacing: @post-title-letter-spacing;
+  transition: @color-transition;
+}
+
+.post-title:hover {
+  color: @jac-blue;
+}
+
+.post-excerpt {
+  line-height: @post-excerpt-line-height;  
 }
 
 .post-content {

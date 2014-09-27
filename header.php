@@ -20,7 +20,7 @@ wp_head();
 <div class="row">
   <div class="col-12">
     <div class="header-wrapper">
-      <img class="header-img" src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpa1/v/t35.0-12/10676574_724728697607927_136640849_o.jpg?oh=dbe83263ecd75166092ce82645fa4173&oe=5426788A&__gda__=1411749909_8e1cd7189d2abdd25211335233332b2e"></img>
+      <img class="header-img" src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t34.0-12/10715969_724728697607927_136640849_n.jpg?oh=f8033318ecd0ffa674575d98a75f4d6e&oe=54278334&__gda__=1411942377_323d0d292f1526af061ffdbb09fb18a0"></img>
     </div>
   </div>
 </div>
