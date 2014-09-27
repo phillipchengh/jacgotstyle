@@ -2942,6 +2942,7 @@ Description: Used to style the TinyMCE editor.
 }
 .post-excerpt {
   line-height: 1.8;
+  font-size: 16px;
 }
 .nav-button {
   background-color: #dc5671;
