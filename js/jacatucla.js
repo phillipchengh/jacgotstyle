@@ -135,7 +135,13 @@ angular.module('jacatucla', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
   //   redirectTo: BASE_PATH + '/'
   // });
 })
-.run(function() {
+.run(function($rootScope, $timeout, $window) {
+  // $rootScope.$on('$routeChangeSuccess', function() {
+  //   $timeout(function() {
+  //     $window.scrollTo(0, 0);
+  //   }, 300);
+  //   console.log('$routeChangeSuccess');
+  // });
 });
 
 /*!
@@ -1949,11 +1955,13 @@ angular.module('jacatucla')
 });
 
 angular.module('jacatucla')
-.controller('post_controller', function($scope, $routeParams, jac_services, BASE_PATH) {
+.controller('post_controller', function($scope, $routeParams, $window, jac_services, BASE_PATH) {
  
   jac_services.get_post($routeParams.name)
   .success(function(response, status, headers, config) {
     $scope.posts = response;
+    console.log('scroll');
+    $window.scrollTo(0, 0);
   })
   .then(function(response, status, headers, config) {
   });

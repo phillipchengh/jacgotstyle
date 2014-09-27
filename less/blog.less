@@ -16,7 +16,7 @@
 }
 
 .post-side {
-  text-align: right;
+  text-align: center;
 }
 
 .post-header {
@@ -30,12 +30,13 @@
 
 .post-month {
   background-color: @date-month-background-color;
-  border: @date-border;
   .border-radius(@date-radius-top);
   color: @date-month-color;
   font-size: @date-month-font-size;
-  padding: @date-month-padding;
+  height: @date-height;
+  // padding: @date-month-padding;
   text-shadow: @date-month-text-shadow;
+  width: @date-width;
 }
 
 .post-day {
@@ -43,8 +44,10 @@
   .border-radius(@date-radius-bottom);
   color: @date-day-color;
   font-size: @date-day-font-size;
-  padding: @date-day-padding;
+  height: @date-height;
+  // padding: @date-day-padding;
   text-shadow: @date-month-text-shadow;
+  width: @date-width;
 }
 
 .post-title {
@@ -62,11 +65,14 @@
 }
 
 .post-excerpt {
-  line-height: @post-excerpt-line-height;  
-  font-size: @post-excerpt-font-size;
+  font-size: @post-font-size;
+  line-height: @post-line-height;  
+  margin-bottom: @post-excerpt-margin-bottom;
 }
 
 .post-content {
+  font-size: @post-font-size;
+  line-height: @post-line-height;
 }
 
 .nav-button {

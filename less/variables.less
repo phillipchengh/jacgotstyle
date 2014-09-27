@@ -30,7 +30,7 @@
 * site
 */
 
-@site-content-color: white;
+@site-content-color: transparent;
 @view-transition: all 1s ease;
 @color-transition: color 0.3s ease 0;
 
@@ -74,8 +74,9 @@
 @post-title-font-weight: 700;
 @post-title-line-height: 1.5;
 @post-title-letter-spacing: -1px;
-@post-excerpt-font-size: 16px;
-@post-excerpt-line-height: 1.8;
+@post-font-size: 18px;
+@post-line-height: 1.8;
+@post-excerpt-margin-bottom: 40px;
 @date-border: 2px solid @jac-blue;
 @date-margin-right: 10px;
 @date-month-background-color: @jac-blue;
@@ -86,7 +87,9 @@
 @date-day-color: @jac-blue;
 @date-day-font-size: 24px;
 @date-day-padding: 0px 10px;
-@date-radius-value: 4px;
+@date-height: 36px;
+@date-width: 2*@date-height;
+@date-radius-value: @date-width;
 @date-radius-top: @date-radius-value @date-radius-value 0px 0px;
 @date-radius-bottom: 0px 0px @date-radius-value @date-radius-value;
 @nav-button-background-color: @jac-pink;

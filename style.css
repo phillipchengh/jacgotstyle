@@ -2277,7 +2277,7 @@ a:focus {
   }
 }
 .site-content-wrapper {
-  background-color: #ffffff;
+  background-color: transparent;
 }
 .header-img {
   width: 100%;
@@ -2917,7 +2917,7 @@ Description: Used to style the TinyMCE editor.
   }
 }
 .post-side {
-  text-align: right;
+  text-align: center;
 }
 .post-header {
   margin-bottom: 10px;
@@ -2928,24 +2928,25 @@ Description: Used to style the TinyMCE editor.
 }
 .post-month {
   background-color: #3287be;
-  border: 2px solid #3287be;
-  -webkit-border-radius: 4px 4px 0px 0px;
-  border-radius: 4px 4px 0px 0px;
+  -webkit-border-radius: 72px 72px 0px 0px;
+  border-radius: 72px 72px 0px 0px;
   background-clip: padding-box;
   color: #ffffff;
   font-size: 14px;
-  padding: 0px 10px;
+  height: 36px;
   text-shadow: rgba(0, 0, 0, 0.25) 0px -1px 0px;
+  width: 72px;
 }
 .post-day {
   border: 2px solid #3287be;
-  -webkit-border-radius: 0px 0px 4px 4px;
-  border-radius: 0px 0px 4px 4px;
+  -webkit-border-radius: 0px 0px 72px 72px;
+  border-radius: 0px 0px 72px 72px;
   background-clip: padding-box;
   color: #3287be;
   font-size: 24px;
-  padding: 0px 10px;
+  height: 36px;
   text-shadow: rgba(0, 0, 0, 0.25) 0px -1px 0px;
+  width: 72px;
 }
 .post-title {
   color: rgba(0, 0, 0, 0.8);
@@ -2960,8 +2961,13 @@ Description: Used to style the TinyMCE editor.
   color: #3287be;
 }
 .post-excerpt {
+  font-size: 18px;
   line-height: 1.8;
-  font-size: 16px;
+  margin-bottom: 40px;
+}
+.post-content {
+  font-size: 18px;
+  line-height: 1.8;
 }
 .nav-button {
   background-color: #dc5671;
