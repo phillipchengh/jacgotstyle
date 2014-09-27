@@ -122,7 +122,7 @@ var PAGES = [
   }
 ];
 
-angular.module('jacatucla', ['ngRoute', 'ui.bootstrap'])
+angular.module('jacatucla', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
 .constant('PAGES', PAGES)
 .constant('CONTENT_PATH', CONTENT_PATH)
 .constant('BASE_PATH', BASE_PATH)

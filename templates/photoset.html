@@ -10,7 +10,7 @@
   </span>
 </div>
 <script type="text/ng-template" id="carousel.html">
-  <div>
+  <div set-ng-animate="false">
     <carousel interval="-1">
       <slide ng-repeat="slide in slides" active="slide.active">
         <img class="carousel-image" ng-src="{{slide.content.src}}">

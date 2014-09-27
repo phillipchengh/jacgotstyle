@@ -122,7 +122,7 @@ var PAGES = [
   }
 ];
 
-angular.module('jacatucla', ['ngRoute', 'ui.bootstrap'])
+angular.module('jacatucla', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
 .constant('PAGES', PAGES)
 .constant('CONTENT_PATH', CONTENT_PATH)
 .constant('BASE_PATH', BASE_PATH)
@@ -1971,7 +1971,19 @@ angular.module('jacatucla')
 
 });
 
-
+angular.module('jacatucla')
+.directive('setNgAnimate', function($animate, CONTENT_PATH) {
+  return {
+    link: function ($scope, $element, $attrs) {
+      $scope.$watch( function() {
+        return $scope.$eval($attrs.setNgAnimate, $scope);
+      }, function(valnew, valold){
+        console.log('Directive animation Enabled: ' + valnew);
+        $animate.enabled(!!valnew, $element);
+      });
+    }
+  };
+});
 
 angular.module('jacatucla')
 .filter('to_trusted', ['$sce', function($sce) {
