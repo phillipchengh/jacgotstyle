@@ -18,21 +18,21 @@ angular.module('jacatucla')
   return function(date_string) {
     var unix_time = new Date(date_string);
     var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    var month = months[unix_time.getMonth()];
+    var month = months[unix_time.getUTCMonth()];
     return month;
   };
 })
 .filter('get_day', function() {
   return function(date_string) {
     var unix_time = new Date(date_string);
-    var day = unix_time.getDate();
+    var day = unix_time.getUTCDate();
     return day;
   };
 })
 .filter('get_year', function() {
   return function(date_string) {
     var unix_time = new Date(date_string);
-    var year = unix_time.getFullYear();
+    var year = unix_time.getUTCFullYear();
     return year;
   };
 });
