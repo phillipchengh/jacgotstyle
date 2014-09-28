@@ -80,16 +80,30 @@
   line-height: @post-line-height;
 }
 
+.nav-button-wrapper {
+  text-align: center;
+}
+
 .nav-button {
   background-color: @nav-button-background-color; 
   border: @nav-button-border;
+  border-radius: 50%;
+  .box-shadow(@nav-button-box-shadow);
   color: @nav-button-color;
   font-size: @nav-button-font-size;
+  font-weight: @nav-button-font-weight;
+  height: @nav-button-diameter;
+  margin: @nav-button-margin;
+  outline: 0;
   padding: @nav-button-padding;
+  text-shadow: @nav-button-text-shadow;
+  .transition(@nav-button-transition);
+  width: @nav-button-diameter;
 }
 
 .nav-button:hover {
-  background-color: darken(@nav-button-background-color, @nav-button-hover-dark%);
+  background-color: white;
+  color: @jac-pink;
 }
 
 .nav-button-href, .nav-button-href:hover, .nav-button-href:focus {

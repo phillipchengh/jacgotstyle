@@ -30,15 +30,15 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 nav-button-wrapper">
       <span ng-show="index < max_pages">
         <a class="nav-button-href" ng-href="{{prev_href}}">
-          <button class="nav-button"><span class="glyphicon glyphicon-arrow-left nav-button-arrow"></span> Prev</button>
+          <button class="nav-button">Prev <div></div><div class="glyphicon glyphicon-arrow-left nav-button-arrow"></div></button>
         </a>
       </span>
       <span ng-show="index <= max_pages && index > 1">
         <a class="nav-button-href" ng-href="{{next_href}}">
-          <button class="nav-button">Next <span class="glyphicon glyphicon-arrow-right nav-button-arrow"></span></button>
+          <button class="nav-button">Next <div></div><div class="glyphicon glyphicon-arrow-right nav-button-arrow"></div></button>
         </a>
       </span>
     </div>
