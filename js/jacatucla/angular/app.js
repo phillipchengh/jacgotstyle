@@ -136,10 +136,4 @@ angular.module('jacatucla', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
   // });
 })
 .run(function($rootScope, $timeout, $window) {
-  // $rootScope.$on('$routeChangeSuccess', function() {
-  //   $timeout(function() {
-  //     $window.scrollTo(0, 0);
-  //   }, 300);
-  //   console.log('$routeChangeSuccess');
-  // });
 });
