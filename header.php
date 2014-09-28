@@ -24,3 +24,9 @@ wp_head();
     </div>
   </div>
 </div>
+<div class="row">
+  <div class="col-12">
+    <?php get_sidebar( 'nav' ) ?>
+  </div>
+</div>
+

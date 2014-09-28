@@ -1960,7 +1960,6 @@ angular.module('jacatucla')
   jac_services.get_post($routeParams.name)
   .success(function(response, status, headers, config) {
     $scope.posts = response;
-    console.log('scroll');
     $window.scrollTo(0, 0);
   })
   .then(function(response, status, headers, config) {

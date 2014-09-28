@@ -15,11 +15,6 @@
  */
 
 get_header(); ?>
-<div class="row">
-  <div class="col-12">
-    <?php get_sidebar( 'nav' ) ?>
-  </div>
-</div>
 <div class="site-content-wrapper row">
   <div class="col-9">
     <div ng-view class="view-animate">
