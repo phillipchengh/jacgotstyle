@@ -2259,7 +2259,7 @@ a:focus {
   text-decoration: none;
 }
 .site-wrapper {
-  margin: 16px 50px;
+  margin: 0px 0px;
 }
 @media (max-width: 992px) {
   .site-wrapper {
@@ -2917,36 +2917,43 @@ Description: Used to style the TinyMCE editor.
   }
 }
 .post-side {
-  text-align: center;
+  padding: 10px 20px;
+  text-align: right;
+}
+@media (max-width: 760px) {
+  .post-side {
+    text-align: center;
+  }
 }
 .post-header {
   margin-bottom: 10px;
 }
 .post-date {
+  border-radius: 12px;
   display: inline-block;
   text-align: center;
 }
-.post-month {
+.post-month-year {
   background-color: #3287be;
-  -webkit-border-radius: 72px 72px 0px 0px;
-  border-radius: 72px 72px 0px 0px;
+  -webkit-border-radius: 12px 12px 0px 0px;
+  border-radius: 12px 12px 0px 0px;
   background-clip: padding-box;
   color: #ffffff;
-  font-size: 14px;
-  height: 36px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 2px 10px;
   text-shadow: rgba(0, 0, 0, 0.25) 0px -1px 0px;
-  width: 72px;
 }
 .post-day {
-  border: 2px solid #3287be;
-  -webkit-border-radius: 0px 0px 72px 72px;
-  border-radius: 0px 0px 72px 72px;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 0px 0px 12px 12px;
+  border-radius: 0px 0px 12px 12px;
   background-clip: padding-box;
   color: #3287be;
-  font-size: 24px;
-  height: 36px;
+  font-size: 42px;
+  font-weight: 700;
+  padding: 0px 20px;
   text-shadow: rgba(0, 0, 0, 0.25) 0px -1px 0px;
-  width: 72px;
 }
 .post-title {
   color: rgba(0, 0, 0, 0.8);

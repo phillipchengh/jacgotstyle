@@ -11,6 +11,7 @@
 @jac-pink: #DC5671;
 @jac-light-blue: #99C5EA;
 @jac-black: rgba(0, 0, 0, 0.8);
+@jac-light-gray: #CCCCCC;
 
 /**
 * grid
@@ -19,7 +20,7 @@
 @desktop-width: 992px;
 @tablet-width: 760px;
 @mobile-width: 480px;
-@site-margin: 16px 50px;
+@site-margin: 0px 0px;
 @site-desktop-margin: 0px 0px;
 @site-tablet-margin: 0px 0px;
 @site-mobile-margin: 0px 0px;
@@ -66,6 +67,7 @@
 @post-desktop-padding: 10px 24px;
 @post-tablet-padding: 10px 24px;
 @post-mobile-padding: 10px 24px;
+@post-side-padding: 10px 20px;
 @post-header-border-bottom: 1px solid gray;
 @post-title-color: @jac-black;
 @post-title-hover-color: @jac-blue;
@@ -79,17 +81,18 @@
 @post-excerpt-margin-bottom: 40px;
 @date-border: 2px solid @jac-blue;
 @date-margin-right: 10px;
-@date-month-background-color: @jac-blue;
-@date-month-color: white;
-@date-month-font-size: 14px;
-@date-month-padding: 0px 10px;
-@date-month-text-shadow: rgba(0, 0, 0, 0.25) 0px -1px 0px;
+@date-month-year-background-color: @jac-blue;
+@date-month-year-color: white;
+@date-month-year-font-size: 18px;
+@date-month-year-font-weight: 700;
+@date-month-year-padding: 2px 10px;
+@date-month-year-text-shadow: rgba(0, 0, 0, 0.25) 0px -1px 0px;
+@date-day-border: 1px solid @jac-light-gray;
 @date-day-color: @jac-blue;
-@date-day-font-size: 24px;
-@date-day-padding: 0px 10px;
-@date-height: 36px;
-@date-width: 2*@date-height;
-@date-radius-value: @date-width;
+@date-day-font-size: 42px;
+@date-day-font-weight: 700;
+@date-day-padding: 0px 20px;
+@date-radius-value: 12px;
 @date-radius-top: @date-radius-value @date-radius-value 0px 0px;
 @date-radius-bottom: 0px 0px @date-radius-value @date-radius-value;
 @nav-button-background-color: @jac-pink;

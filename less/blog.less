@@ -16,7 +16,13 @@
 }
 
 .post-side {
-  text-align: center;
+  padding: @post-side-padding;
+  text-align: right;
+  
+  @media (max-width: @tablet-width) {
+    text-align: center;
+  }
+
 }
 
 .post-header {
@@ -24,30 +30,29 @@
 }
 
 .post-date {
+  border-radius: @date-radius-value;
   display: inline-block;
   text-align: center;
 }
 
-.post-month {
-  background-color: @date-month-background-color;
+.post-month-year {
+  background-color: @date-month-year-background-color;
   .border-radius(@date-radius-top);
-  color: @date-month-color;
-  font-size: @date-month-font-size;
-  height: @date-height;
-  // padding: @date-month-padding;
-  text-shadow: @date-month-text-shadow;
-  width: @date-width;
+  color: @date-month-year-color;
+  font-size: @date-month-year-font-size;
+  font-weight: @date-month-year-font-weight;
+  padding: @date-month-year-padding;
+  text-shadow: @date-month-year-text-shadow;
 }
 
 .post-day {
-  border: @date-border;
+  border: @date-day-border;
   .border-radius(@date-radius-bottom);
   color: @date-day-color;
   font-size: @date-day-font-size;
-  height: @date-height;
-  // padding: @date-day-padding;
-  text-shadow: @date-month-text-shadow;
-  width: @date-width;
+  font-weight: @date-day-font-weight;
+  padding: @date-day-padding;
+  text-shadow: @date-month-year-text-shadow;
 }
 
 .post-title {

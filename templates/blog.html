@@ -6,8 +6,8 @@
         <div class="row">
           <div class="col-3 post-side">
             <span class="post-date">
-              <div class="post-month">
-                {{post.date | get_month}}
+              <div class="post-month-year">
+                {{post.date | get_month}} {{post.date | get_year}}
               </div>
               <div class="post-day">
                 {{post.date | get_day}}
