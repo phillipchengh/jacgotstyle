@@ -20,8 +20,14 @@
                 <h2 class="post-title" ng-bind-html="post.title | to_trusted"></h2>
               </a>
             </div>
-            <div class="post-excerpt" ng-bind-html="post.excerpt | to_trusted">
-            </div>
+            <span ng-if="post.sticky">
+              <div class="post post-content" ng-bind-html="post.content | to_trusted">
+              </div>
+            </span>
+            <span ng-if="!post.sticky">
+              <div class="post-excerpt" ng-bind-html="post.excerpt | to_trusted">
+              </div>
+            </span>
           </div>
         </div>
       </div>
