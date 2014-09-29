@@ -15,29 +15,54 @@
  */
 
 get_header(); ?>
+<div class="row">
+  <div class="col-12">
+    <?php get_sidebar( 'nav' ) ?>
+  </div>
+</div>
 <div class="site-content-wrapper row">
   <div class="col-9">
     <div ng-view class="view-animate">
     </div>
     <noscript>
     <div class="row">
-      <?php
-        jacatucla_paging_nav();
-        $posts = get_posts();
-        foreach ( $posts as $post ) : 
-          setup_postdata( $post );
-          $title = get_the_title();
-          $content = get_the_content();
-          $date = get_the_date();
-      ?>
-        <div class="post">
-          <?= $title ?>  
-          <?= $content ?>
-          <?= $date ?>
+      <div class="col-12">
+        <?php
+          while ( have_posts() ) : 
+            the_post();
+            $title = get_the_title();
+            $excerpt = get_the_excerpt();
+            $date = get_the_date();
+            $link = get_the_permalink();
+        ?>
+        <div class="post-wrapper">
+          <div class="row">
+            <div class="col-3 post-side">
+              <?= $date ?>
+            </div>
+            <div class="col-9">
+              <div class="post-header">
+                <a href="<?= $link ?>">
+                  <h2 class="post-title"><?= $title ?></h2>
+                </a>
+                <div class="post-excerpt">
+                  <?= $excerpt ?>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      <?php
-        endforeach; 
-      ?>
+        <?php
+          wp_reset_postdata();
+          endwhile; 
+        ?>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 nav-button-wrapper">
+        <?php next_posts_link( '<button class="nav-button">Prev <div></div><div class="glyphicon glyphicon-arrow-left nav-button-arrow"></div></button>' ); ?>
+        <?php previous_posts_link( '<button class="nav-button">Next <div></div><div class="glyphicon glyphicon-arrow-right nav-button-arrow"></div></button>' ); ?>
+      </div>
     </div>
     </noscript>
   </div>
