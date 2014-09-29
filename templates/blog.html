@@ -27,6 +27,9 @@
             <span ng-if="!post.sticky">
               <div class="post-excerpt" ng-bind-html="post.excerpt | to_trusted">
               </div>
+              <a href="{{post.link}}">
+                <span class="post-read-more">Read More</span>
+              </a>
             </span>
           </div>
         </div>

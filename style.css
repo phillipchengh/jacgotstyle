@@ -2305,6 +2305,7 @@ Description: Used to style the TinyMCE editor.
   text-align: right;
 }
 .post-wrapper {
+  margin-bottom: 40px;
   padding: 10px 50px;
 }
 @media (max-width: 992px) {
@@ -2375,10 +2376,18 @@ Description: Used to style the TinyMCE editor.
 .post-title:hover {
   color: #3287be;
 }
+.post-read-more {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.post-read-more:hover {
+  color: #3287be;
+}
 .post-excerpt {
   font-size: 18px;
   line-height: 1.8;
-  margin-bottom: 40px;
 }
 .post-content {
   font-size: 18px;
