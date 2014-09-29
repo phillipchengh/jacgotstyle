@@ -23,6 +23,7 @@ a:hover, a:focus {
 
 .site-content-wrapper {
   background-color: @site-content-color;
+  .box-shadow(@site-content-shadow);
 }
 
 .header-wrapper {
@@ -36,9 +37,17 @@ a:hover, a:focus {
 }
 
 .footer-wrapper {
+  background-color: @footer-background-color;
+  color: @jac-light-yellow;
   font-size: @footer-font-size;
+  font-weight: @footer-font-weight;
   padding: @footer-padding;
   text-align: center;
+  text-shadow: @footer-text-shadow;
+}
+
+.footer-img {
+  height: @footer-img-height;  
 }
 
 .page-wrapper {
