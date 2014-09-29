@@ -1,11 +1,8 @@
 <div class="photos-wrapper">
   <h1>Photoset!</h1>
   <span ng-repeat="photo in photos">
-    <div class="album-wrapper">
-      <div class="thumbnail-wrapper" ng-click="open_slider($index)">
-        <img ng-src="{{photo.media$group.media$thumbnail[0].url}}"></img>
-      </div>
-      <div class="thumbnail-text"></div>
+    <div class="photo-wrapper" ng-click="open_slider($index)">
+      <img ng-src="{{photo.media$group.media$thumbnail[0].url}}"></img>
     </div>
   </span>
 </div>

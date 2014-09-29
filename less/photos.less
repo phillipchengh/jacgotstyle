@@ -2,27 +2,27 @@
   text-align: center;
 }
 
-.album-wrapper {
-  .box-shadow(@photo-wrapper-shadow);
-  .border-radius(@photo-wrapper-radius);
-  display: inline-block;
-  margin: @photo-wrapper-margin;
-}
-
-.thumbnail-wrapper {
+.album-thumbnail-wrapper {
   background-color: black;
-  .border-radius(@photo-wrapper-top-radius);
+  .border-radius(@album-wrapper-top-radius);
   display: inline-block;
   height: @thumbnail-height;
   width: @thumbnail-width;
 }
 
-.thumbnail-img {
-  .border-radius(@photo-wrapper-top-radius);
+.album-wrapper {
+  .box-shadow(@album-wrapper-shadow);
+  .border-radius(@album-wrapper-radius);
+  display: inline-block;
+  margin: @album-wrapper-margin;
 }
 
-.thumbnail-text {
-  .border-radius(@photo-wrapper-bottom-radius);
+.album-thumbnail-img {
+  .border-radius(@album-wrapper-top-radius);
+}
+
+.album-thumbnail-text {
+  .border-radius(@album-wrapper-bottom-radius);
   color: @thumbnail-text-color;
   overflow: hidden;
   padding: @thumbnail-text-padding;
@@ -31,8 +31,18 @@
   width: @thumbnail-width;
 }
 
-.thumbnail-title {
+.album-thumbnail-title {
   font-weight: @thumbnail-title-font-weight;
+}
+
+.photo-wrapper {
+  background-color: black;
+  border: @photo-wrapper-border;
+  cursor: pointer;
+  display: inline-block; 
+  height: @thumbnail-height;
+  margin: @photo-wrapper-margin;
+  width: @thumbnail-width;
 }
 
 .carousel-remove {

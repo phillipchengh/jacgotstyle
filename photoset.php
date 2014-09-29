@@ -11,10 +11,12 @@ get_header(); ?>
 <div class="site-content-wrapper row">
   <div class="col-9">
     <div ng-view class="view-animate">
-      <noscript>
-      You need JavaScript to view our photos on this page, but you can view our albums at <a href="https://plus.google.com/photos/116245231045240410001/albums?banner=pwa">picasa.</a>
-      </noscript>
     </div>
+    <noscript>
+      <div class="post post-content">
+      You need JavaScript to view our photos on this page, but you can view our albums at <a href="https://plus.google.com/photos/116245231045240410001/albums?banner=pwa">picasa.</a>
+      </div>
+    </noscript>
   </div>
   <div class="col-3">
     <?php get_sidebar(); ?>

@@ -3,11 +3,11 @@
   <span ng-repeat="album in albums">
     <a ng-href="{{BASE_PATH}}/photoset?album_id={{album.gphoto$id.$t}}">
       <div class="album-wrapper">
-        <div class="thumbnail-wrapper">
-          <img class="thumbnail-img" ng-src="{{album.media$group.media$thumbnail[0].url}}"></img>
+        <div class="album-thumbnail-wrapper">
+          <img class="album-thumbnail-img" ng-src="{{album.media$group.media$thumbnail[0].url}}"></img>
         </div>
-        <div class="thumbnail-text thumbnail-title">{{album.title.$t}}</div>
-        <div class="thumbnail-text thumbnail-photo-number">{{album.gphoto$numphotos.$t}} photos</div>
+        <div class="album-thumbnail-text album-thumbnail-title">{{album.title.$t}}</div>
+        <div class="album-thumbnail-text album-thumbnail-photo-number">{{album.gphoto$numphotos.$t}} photos</div>
       </div>
     </a>
   </span>
