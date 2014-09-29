@@ -63,6 +63,7 @@ var PAGES = [
     path: BASE_PATH + '/fresh-produce',
     route: {
       templateUrl: CONTENT_PATH + 'templates/freshproduce.html',
+      controller: 'freshproduce_controller',
       data: {
         tab: 'Fresh Produce'
       }
@@ -1856,6 +1857,19 @@ angular.module('jacatucla')
     $scope.posts = response;
     $scope.max_pages = headers('X-WP-TotalPages');
     $window.scrollTo(0, 0);
+  });
+
+});
+
+angular.module('jacatucla')
+.controller('freshproduce_controller', function($scope, jac_services, FP_ANTHOLOGY_ALBUM_ID) {
+  
+  jac_services.get_photos(FP_ANTHOLOGY_ALBUM_ID)
+  .success(function(response) {
+    $scope.slides = response.feed.entry;
+  })
+  .error(function(data, status, headers, config) {
+    console.log('error');
   });
 
 });

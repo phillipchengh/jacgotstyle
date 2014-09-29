@@ -156,6 +156,9 @@ table {
 * blog and archives
 */
 /**
+* fresh produce
+*/
+/**
 * photos and photosets
 */
 /**
@@ -2411,6 +2414,32 @@ Description: Used to style the TinyMCE editor.
 .nav-button-arrow {
   font-size: 56px;
   vertical-align: 2px;
+}
+.freshproduce-carousel-wrapper {
+  text-align: center;
+}
+.freshproduce-carousel-wrapper .icon-next {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 100px !important;
+}
+.freshproduce-carousel-wrapper .icon-prev {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 100px !important;
+}
+.freshproduce-carousel {
+  display: inline-block;
+}
+.freshproduce-img {
+  max-height: 750px;
+}
+.freshproduce-caption {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 24px;
+}
+.anthology-title {
+  font-size: 24px;
+  font-style: italic;
+  text-align: center;
 }
 .photos-wrapper {
   text-align: center;

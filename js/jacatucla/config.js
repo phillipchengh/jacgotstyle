@@ -63,6 +63,7 @@ var PAGES = [
     path: BASE_PATH + '/fresh-produce',
     route: {
       templateUrl: CONTENT_PATH + 'templates/freshproduce.html',
+      controller: 'freshproduce_controller',
       data: {
         tab: 'Fresh Produce'
       }

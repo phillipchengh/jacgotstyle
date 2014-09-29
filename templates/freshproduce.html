@@ -9,3 +9,16 @@
     </p>
   </div>
 </div>
+<h3 class="anthology-title">Check out our 2014 Anthology!</h3>
+</br>
+<div class="freshproduce-carousel-wrapper" set-ng-animate="false">
+  <carousel class="freshproduce-carousel" interval="-1">
+  <slide ng-repeat="slide in slides" active="slide.active">
+  <img class="carousel-image freshproduce-img" ng-src="{{slide.content.src}}">
+  <div class="carousel-caption freshproduce-caption">
+    <h4>{{$index+1}} of {{slides.length}}</h4>
+  </div>
+  </slide>
+  </carousel>
+</div>
+
