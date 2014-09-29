@@ -1886,9 +1886,12 @@ angular.module('jacatucla')
 
   $scope.BASE_PATH = BASE_PATH;
 
-  jac_services.get_albums
-  .then(function(response) {
-    $scope.albums = response.data.feed.entry;
+  jac_services.get_albums()
+  .success(function(response) {
+    $scope.albums = response.feed.entry;
+  })
+  .error(function() {
+    console.log('error');
   });
   
 });
@@ -1938,12 +1941,12 @@ angular.module('jacatucla')
   };
   
   jac_services.get_photos(album_id)
+  .success(function(response) {
+    $scope.photos = response.feed.entry;
+    $scope.slides = $scope.photos;
+  })
   .error(function(data, status, headers, config) {
     console.log('error!');
-  })
-  .then(function(response) {
-    $scope.photos = response.data.feed.entry;
-    $scope.slides = $scope.photos;
   });
 
 });

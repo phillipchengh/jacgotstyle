@@ -13,6 +13,7 @@
 @jac-black: rgba(0, 0, 0, 0.8);
 @jac-light-gray: #CCCCCC;
 
+@jac-shadow: 0px 1px 2px 2px rgba(0,0,0,0.25);
 @jac-banner-width: 960px;
 
 /**
@@ -101,7 +102,7 @@
 @date-radius-bottom: 0px 0px @date-radius-value @date-radius-value;
 @nav-button-background-color: @jac-pink;
 @nav-button-border: 6px solid @jac-pink;
-@nav-button-box-shadow: 0px 1px 2px 2px rgba(0,0,0,0.25);
+@nav-button-box-shadow: @jac-shadow;
 @nav-button-color: white;
 @nav-button-font-size: 16px;
 @nav-button-font-weight: 700;
@@ -119,6 +120,15 @@
 
 @thumbnail-height: 160px;
 @thumbnail-width: 160px;
+@thumbnail-text-color: @jac-black;
+@thumbnail-text-padding: 1px;
+@thumbnail-title-font-weight: 700;
+@photo-wrapper-margin: 10px;
+@photo-wrapper-radius-value: 8px;
+@photo-wrapper-radius: @photo-wrapper-radius-value @photo-wrapper-radius-value @photo-wrapper-radius-value @photo-wrapper-radius-value;
+@photo-wrapper-top-radius: @photo-wrapper-radius-value @photo-wrapper-radius-value 0px 0px;
+@photo-wrapper-bottom-radius: 0px 0px @photo-wrapper-radius-value @photo-wrapper-radius-value;
+@photo-wrapper-shadow: @jac-shadow;
 @modal-dialog-width: @desktop-width;
 @modal-opacity: 0.9;
 
@@ -129,7 +139,7 @@
 @officers-wrapper-width: 95%;
 @officer-mason-padding-value: 20px;
 @officer-radius-value: 10px;
-@officer-mason-shadow: 0px 1px 2px 2px rgba(0,0,0,0.25);
+@officer-mason-shadow: @jac-shadow;
 @officer-description-padding: 4px;
 @officer-mason-padding: 0px @officer-mason-padding-value @officer-mason-padding-value @officer-mason-padding-value;
 @officer-radius: @officer-radius-value @officer-radius-value @officer-radius-value @officer-radius-value;

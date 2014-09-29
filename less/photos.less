@@ -3,21 +3,36 @@
 }
 
 .album-wrapper {
+  .box-shadow(@photo-wrapper-shadow);
+  .border-radius(@photo-wrapper-radius);
   display: inline-block;
+  margin: @photo-wrapper-margin;
 }
 
 .thumbnail-wrapper {
   background-color: black;
+  .border-radius(@photo-wrapper-top-radius);
   display: inline-block;
   height: @thumbnail-height;
   width: @thumbnail-width;
 }
 
+.thumbnail-img {
+  .border-radius(@photo-wrapper-top-radius);
+}
+
 .thumbnail-text {
+  .border-radius(@photo-wrapper-bottom-radius);
+  color: @thumbnail-text-color;
   overflow: hidden;
+  padding: @thumbnail-text-padding;
   text-overflow: ellipsis;
   white-space: nowrap;
   width: @thumbnail-width;
+}
+
+.thumbnail-title {
+  font-weight: @thumbnail-title-font-weight;
 }
 
 .carousel-remove {

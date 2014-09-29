@@ -43,12 +43,12 @@ angular.module('jacatucla')
   };
   
   jac_services.get_photos(album_id)
+  .success(function(response) {
+    $scope.photos = response.feed.entry;
+    $scope.slides = $scope.photos;
+  })
   .error(function(data, status, headers, config) {
     console.log('error!');
-  })
-  .then(function(response) {
-    $scope.photos = response.data.feed.entry;
-    $scope.slides = $scope.photos;
   });
 
 });
