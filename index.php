@@ -32,6 +32,7 @@ get_header(); ?>
             the_post();
             $title = get_the_title();
             $excerpt = get_the_excerpt();
+            $content = get_the_content();
             $date = get_the_date();
             $link = get_the_permalink();
         ?>
@@ -40,14 +41,23 @@ get_header(); ?>
             <div class="col-3 post-side">
               <?= $date ?>
             </div>
-            <div class="col-9">
+            <div class="col-9 post-col">
               <div class="post-header">
                 <a href="<?= $link ?>">
                   <h2 class="post-title"><?= $title ?></h2>
                 </a>
-                <div class="post-excerpt">
-                  <?= $excerpt ?>
-                </div>
+                <?php if ( is_sticky() ): ?>
+                  <div class="post post-content">
+                    <?= $content ?>
+                  </div>
+                <?php else: ?>
+                  <div class="post-excerpt">
+                    <?= $excerpt ?>
+                  </div>
+                  <a href="<?= $link ?>">
+                    <span class="post-read-more">Read More</span>
+                  </a>
+                <?php endif; ?>
               </div>
             </div>
           </div>
