@@ -11,7 +11,7 @@ angular.module('jacatucla')
   jac_services.get_archives($routeParams.month, '20' + $routeParams.year, $scope.index)
   .success(function(response, status, headers, config) {
     $scope.posts = response;
-    $scope.max_pages = headers('X-WP-Total');
+    $scope.max_pages = headers('X-WP-Total-Pages');
   })
   .then(function(response, status, headers, config) {
   });
