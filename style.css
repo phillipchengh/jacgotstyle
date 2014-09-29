@@ -2014,18 +2014,13 @@ Description: Used to style the TinyMCE editor.
   margin-bottom: 23px;
 }
 .post a {
-  color: #24890d;
   text-decoration: none;
-}
-.post a:visited {
-  color: #24890d;
 }
 .post a:focus {
   outline: thin dotted;
 }
 .post a:active,
 .post a:hover {
-  color: #41a62a;
   outline: 0;
 }
 .post .alignleft {
