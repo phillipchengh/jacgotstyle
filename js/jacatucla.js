@@ -1943,6 +1943,7 @@ angular.module('jacatucla')
   jac_services.get_photos(album_id)
   .success(function(response) {
     $scope.photos = response.feed.entry;
+    $scope.album_name = response.feed.title.$t;
     $scope.slides = $scope.photos;
   })
   .error(function(data, status, headers, config) {
