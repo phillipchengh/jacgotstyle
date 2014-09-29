@@ -1818,7 +1818,7 @@ angular.module("template/modal/window.html", []).run(["$templateCache", function
 }]);
 
 angular.module('jacatucla')
-.controller('archives_controller', function($scope, $routeParams, jac_services, BASE_PATH) {
+.controller('archives_controller', function($scope, $routeParams, $window, jac_services, BASE_PATH) {
 
   var BASE_ARCHIVE_PATH = BASE_PATH + '/20' + $routeParams.year + '/' + $routeParams.month;
   $scope.index = ($routeParams.page_number) ? parseInt($routeParams.page_number, 10) : 1;
@@ -1831,13 +1831,13 @@ angular.module('jacatucla')
   .success(function(response, status, headers, config) {
     $scope.posts = response;
     $scope.max_pages = headers('X-WP-Total-Pages');
-  })
-  .then(function(response, status, headers, config) {
+    $window.scrollTo(0, 0);
   });
+
 });
 
 angular.module('jacatucla')
-.controller('blog_controller', function($scope, $routeParams, jac_services, BASE_PATH) {
+.controller('blog_controller', function($scope, $routeParams, $window, jac_services, BASE_PATH) {
   
   $scope.index = ($routeParams.page_number) ? parseInt($routeParams.page_number, 10) : 1;
   $scope.prev_index = $scope.index + 1;
@@ -1849,8 +1849,7 @@ angular.module('jacatucla')
   .success(function(response, status, headers, config) {
     $scope.posts = response;
     $scope.max_pages = headers('X-WP-TotalPages');
-  })
-  .then(function(response, status, headers, config) {
+    $window.scrollTo(0, 0);
   });
 
 });
@@ -1959,8 +1958,6 @@ angular.module('jacatucla')
   .success(function(response, status, headers, config) {
     $scope.posts = response;
     $window.scrollTo(0, 0);
-  })
-  .then(function(response, status, headers, config) {
   });
 
 });

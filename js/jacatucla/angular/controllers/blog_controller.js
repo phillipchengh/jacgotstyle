@@ -1,5 +1,5 @@
 angular.module('jacatucla')
-.controller('blog_controller', function($scope, $routeParams, jac_services, BASE_PATH) {
+.controller('blog_controller', function($scope, $routeParams, $window, jac_services, BASE_PATH) {
   
   $scope.index = ($routeParams.page_number) ? parseInt($routeParams.page_number, 10) : 1;
   $scope.prev_index = $scope.index + 1;
@@ -11,8 +11,7 @@ angular.module('jacatucla')
   .success(function(response, status, headers, config) {
     $scope.posts = response;
     $scope.max_pages = headers('X-WP-TotalPages');
-  })
-  .then(function(response, status, headers, config) {
+    $window.scrollTo(0, 0);
   });
 
 });

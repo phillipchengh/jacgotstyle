@@ -5,8 +5,6 @@ angular.module('jacatucla')
   .success(function(response, status, headers, config) {
     $scope.posts = response;
     $window.scrollTo(0, 0);
-  })
-  .then(function(response, status, headers, config) {
   });
 
 });
