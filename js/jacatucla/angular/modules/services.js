@@ -1,5 +1,5 @@
 angular.module('jacatucla')
-.factory('jac_services', function($http, BASE_PATH) {
+.factory('jac_services', function($http, BASE_PATH, JAC_PICASA_USER_ID) {
   var jac_services = {};
 
   jac_services.get_site_info = function() {
@@ -23,11 +23,11 @@ angular.module('jacatucla')
   };
 
   jac_services.get_albums = function() {
-    return $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001', params: {'alt': 'json'}});
+    return $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/' + JAC_PICASA_USER_ID, params: {'alt': 'json'}});
   };
   
   jac_services.get_photos = function(album_id) {
-     return $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001/albumid/' + album_id, params: {'alt': 'json', 'thumbsize': '160', 'imgmax': '1600'}});
+     return $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/' + JAC_PICASA_USER_ID + '/albumid/' + album_id, params: {'alt': 'json', 'thumbsize': '160', 'imgmax': '1600'}});
   };
 
   return jac_services;

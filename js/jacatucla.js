@@ -1,5 +1,7 @@
 var BASE_PATH = '/wordpress';
 var CONTENT_PATH = BASE_PATH + '/wp-content/themes/jacgotstyle/';
+var JAC_PICASA_USER_ID = '116245231045240410001';
+var FP_ANTHOLOGY_ALBUM_ID = '6064555998234103921';
 
 var PAGES = [
   {
@@ -122,10 +124,14 @@ var PAGES = [
   }
 ];
 
+
+
 angular.module('jacatucla', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
-.constant('PAGES', PAGES)
-.constant('CONTENT_PATH', CONTENT_PATH)
 .constant('BASE_PATH', BASE_PATH)
+.constant('CONTENT_PATH', CONTENT_PATH)
+.constant('JAC_PICASA_USER_ID', JAC_PICASA_USER_ID)
+.constant('FP_ANTHOLOGY_ALBUM_ID', FP_ANTHOLOGY_ALBUM_ID)
+.constant('PAGES', PAGES)
 .config(function($routeProvider, $locationProvider, PAGES) {
   $locationProvider.html5Mode(true);
   for (var i = 0; i < PAGES.length; i++) {
@@ -2027,7 +2033,7 @@ angular.module('jacatucla')
 });
 
 angular.module('jacatucla')
-.factory('jac_services', function($http, BASE_PATH) {
+.factory('jac_services', function($http, BASE_PATH, JAC_PICASA_USER_ID) {
   var jac_services = {};
 
   jac_services.get_site_info = function() {
@@ -2051,11 +2057,11 @@ angular.module('jacatucla')
   };
 
   jac_services.get_albums = function() {
-    return $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001', params: {'alt': 'json'}});
+    return $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/' + JAC_PICASA_USER_ID, params: {'alt': 'json'}});
   };
   
   jac_services.get_photos = function(album_id) {
-     return $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/116245231045240410001/albumid/' + album_id, params: {'alt': 'json', 'thumbsize': '160', 'imgmax': '1600'}});
+     return $http({method: 'GET', url: 'https://picasaweb.google.com/data/feed/api/user/' + JAC_PICASA_USER_ID + '/albumid/' + album_id, params: {'alt': 'json', 'thumbsize': '160', 'imgmax': '1600'}});
   };
 
   return jac_services;
