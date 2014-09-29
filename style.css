@@ -1680,6 +1680,10 @@ a:focus {
   line-height: 1.5;
   letter-spacing: -1px;
 }
+.fourohfour {
+  font-size: 36px;
+  text-align: center;
+}
 .view-animate {
   opacity: 1;
 }

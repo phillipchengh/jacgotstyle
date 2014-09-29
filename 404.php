@@ -9,6 +9,6 @@
 
 get_header(); ?>
 
-ERROR
+<h1 class="fourohfour">Four Oh Four =[</h1>
 
 <?php get_footer(); ?>
