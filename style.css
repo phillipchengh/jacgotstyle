@@ -1638,7 +1638,7 @@ a:focus {
   text-decoration: none;
 }
 .site-wrapper {
-  margin: 0px 50px;
+  margin: 0px 0px;
 }
 @media (max-width: 992px) {
   .site-wrapper {
@@ -1733,10 +1733,14 @@ a:focus {
   background-color: #f5b740;
   font-size: 18px;
   padding: 4px 0px;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
 }
 .widget-wrapper {
   background-color: #fadca1;
   margin-bottom: 10px;
+  -webkit-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
 }
 .widget-wrapper > ul {
   padding: 12px 18px;
@@ -1753,6 +1757,8 @@ a:focus {
 .nav-wrapper {
   background-color: #f5b740;
   margin-bottom: 10px;
+  -webkit-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
 }
 .nav-item-wrapper {
   color: #dc5671;

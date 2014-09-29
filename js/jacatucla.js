@@ -138,6 +138,7 @@ angular.module('jacatucla', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
   for (var i = 0; i < PAGES.length; i++) {
     $routeProvider.when(PAGES[i].path, PAGES[i].route);  
   }
+  $routeProvider.otherwise({});
   // $routeProvider.otherwise({
   //   redirectTo: BASE_PATH + '/'
   // });
