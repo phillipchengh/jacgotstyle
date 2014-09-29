@@ -141,7 +141,7 @@ table {
 * variables
 */
 /**
-* colors
+* jac variables
 */
 /**
 * grid
@@ -1635,7 +1635,7 @@ a:focus {
   text-decoration: none;
 }
 .site-wrapper {
-  margin: 0px 0px;
+  margin: 0px 50px;
 }
 @media (max-width: 992px) {
   .site-wrapper {
@@ -1655,8 +1655,18 @@ a:focus {
 .site-content-wrapper {
   background-color: transparent;
 }
-.header-img {
-  width: 100%;
+.header-wrapper {
+  text-align: center;
+}
+@media (max-width: 960px) {
+  .header-img {
+    width: 100%;
+  }
+}
+.footer-wrapper {
+  font-size: 16px;
+  padding: 50px;
+  text-align: center;
 }
 .view-animate {
   opacity: 1;

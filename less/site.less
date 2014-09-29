@@ -33,8 +33,20 @@ a:hover, a:focus {
   background-color: @site-content-color;
 }
 
+.header-wrapper {
+  text-align: center;
+}
+
 .header-img {
-  width: 100%;
+  @media (max-width: @jac-banner-width) {
+    width: 100%;
+  }
+}
+
+.footer-wrapper {
+  font-size: @footer-font-size;
+  padding: @footer-padding;
+  text-align: center;
 }
 
 .view-animate {
