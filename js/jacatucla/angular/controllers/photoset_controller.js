@@ -17,7 +17,7 @@ var modal_controller = function($scope, $modalInstance, $document, $timeout, pho
  };
 
 angular.module('jacatucla')
-.controller('photoset_controller', function($scope, jac_services, $routeParams, $document, $modal) {
+.controller('photoset_controller', function($scope, jac_services, $routeParams, $document, $modal, $window) {
 
   var album_id = $routeParams.album_id;
 
@@ -47,6 +47,7 @@ angular.module('jacatucla')
     $scope.photos = response.feed.entry;
     $scope.album_name = response.feed.title.$t;
     $scope.slides = $scope.photos;
+    $window.scrollTo(0, 0);
   })
   .error(function(data, status, headers, config) {
     console.log('error!');
