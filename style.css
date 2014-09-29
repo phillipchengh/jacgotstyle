@@ -1668,6 +1668,18 @@ a:focus {
   padding: 50px;
   text-align: center;
 }
+.page-wrapper {
+  padding: 0px 50px;
+}
+.page-title {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -1px;
+}
 .view-animate {
   opacity: 1;
 }

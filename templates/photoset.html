@@ -1,5 +1,5 @@
 <div class="photos-wrapper">
-  <h1>{{album_name}}</h1>
+  <h1 class="page-title">{{album_name}}</h1>
   <span ng-repeat="photo in photos">
     <div class="photo-wrapper" ng-click="open_slider($index)">
       <img ng-src="{{photo.media$group.media$thumbnail[0].url}}"></img>

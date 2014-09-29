@@ -1,5 +1,5 @@
 <div class="photos-wrapper">
-  <h1>JAC has {{albums.length}} albums!</h1>
+  <h1 class="page-title">JAC has {{albums.length}} albums!</h1>
   <span ng-repeat="album in albums">
     <a ng-href="{{BASE_PATH}}/photoset?album_id={{album.gphoto$id.$t}}">
       <div class="album-wrapper">
