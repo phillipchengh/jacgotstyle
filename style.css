@@ -2327,6 +2327,8 @@ Description: Used to style the TinyMCE editor.
   margin-bottom: 10px;
 }
 .post-date {
+  -webkit-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   display: inline-block;
   text-align: center;
