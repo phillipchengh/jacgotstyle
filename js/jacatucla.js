@@ -1840,6 +1840,9 @@ angular.module('jacatucla')
     $scope.posts = response;
     $scope.max_pages = headers('X-WP-Total-Pages');
     $window.scrollTo(0, 0);
+    angular.element(document).ready(function() {
+      angular.element($('.post-content a')).attr('target', '_self');
+    });
   });
 
 });
@@ -1858,6 +1861,9 @@ angular.module('jacatucla')
     $scope.posts = response;
     $scope.max_pages = headers('X-WP-TotalPages');
     $window.scrollTo(0, 0);
+    angular.element(document).ready(function() {
+      angular.element($('.post-content a')).attr('target', '_self');
+    });
   });
 
 });
