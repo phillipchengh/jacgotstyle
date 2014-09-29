@@ -52,14 +52,34 @@
 
 .nav-wrapper {
   background-color: @nav-background-color;
-  margin-bottom: @nav-margin-bottom;
   .box-shadow(@nav-shadow);
+  margin-bottom: @nav-margin-bottom;
+  text-align: center;
 }
 
 .nav-item-wrapper {
   color: @nav-color;
   display: inline-block;
+  font-size: @nav-font-size;
+  font-weight: @nav-font-weight;
   padding: @nav-padding;
+  transition: @background-color-transition;
+
+  @media (max-width: @desktop-width) {
+    font-size: @nav-desktop-font-size;
+    padding: @nav-desktop-padding;
+  }
+
+  @media (max-width: @tablet-width) {
+    font-size: @nav-tablet-font-size;
+    padding: @nav-tablet-padding;
+  }
+
+  @media (max-width: @mobile-width) {
+    font-size: @nav-mobile-font-size;
+    padding: @nav-mobile-padding;
+  }
+
 }
 
 .nav-item-wrapper:hover, .nav-item-wrapper:focus {
