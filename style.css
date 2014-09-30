@@ -1842,6 +1842,10 @@ a:focus {
   font-size: 18px;
   font-weight: 700;
   padding: 14px 24px;
+  -webkit-transition: background-color 0.3s ease 0;
+  -moz-transition: background-color 0.3s ease 0;
+  -o-transition: background-color 0.3s ease 0;
+  -ms-transition: background-color 0.3s ease 0;
   transition: background-color 0.3s ease 0;
 }
 @media (max-width: 992px) {
@@ -2473,6 +2477,10 @@ Description: Used to style the TinyMCE editor.
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: -1px;
+  -webkit-transition: color 0.3s ease 0;
+  -moz-transition: color 0.3s ease 0;
+  -o-transition: color 0.3s ease 0;
+  -ms-transition: color 0.3s ease 0;
   transition: color 0.3s ease 0;
 }
 .post-title:hover {
@@ -2483,6 +2491,10 @@ Description: Used to style the TinyMCE editor.
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
+  -webkit-transition: color 0.3s ease 0;
+  -moz-transition: color 0.3s ease 0;
+  -o-transition: color 0.3s ease 0;
+  -ms-transition: color 0.3s ease 0;
   transition: color 0.3s ease 0;
 }
 .post-read-more:hover {
