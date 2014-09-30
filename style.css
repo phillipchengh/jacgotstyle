@@ -1758,6 +1758,10 @@ a:focus {
   font-size: 36px;
   text-align: center;
 }
+.about-img {
+  float: left;
+  width: 25%;
+}
 .view-animate {
   opacity: 1;
 }
