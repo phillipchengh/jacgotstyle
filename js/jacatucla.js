@@ -144,6 +144,9 @@ angular.module('jacatucla', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
   // });
 })
 .run(function($rootScope, $timeout, $window) {
+  angular.element(document).ready(function() {
+    angular.element($('#wpadminbar a')).attr('target', '_self'); 
+  });
 });
 
 /*!
