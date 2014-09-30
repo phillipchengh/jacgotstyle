@@ -84,17 +84,12 @@ function jacgotstylescripts_styles() {
 	
 	// Loads our main stylesheet.
 	wp_enqueue_style( 'jac_got_style', get_stylesheet_uri(), array(), '2014-07-01' );
-  /* wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css', array(), '2014-07-01' ); */
-  /* wp_enqueue_style( 'bootstrap-carousel', 'http://blog.revolunet.com/angular-carousel/dist/angular-carousel.min.css', array(), '2014-07-01' ); */
 
-  // Register angular from google.
+  // Register stuff.
   wp_register_script( 'jQuery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', array(), null, false );
   wp_register_script( 'angular', '//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js', array(), null, false );
   wp_register_script( 'angular-route', '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js', array(), null, false );
   wp_register_script( 'angular-animate', '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-animate.min.js', array(), null, false );
-
-  // Register angular from ourselves.
-  // wp_register_script( 'angular', get_template_directory_uri() . '/js/libs/angular.min.js', array(), null, false );
 
   // Register our main javascript.
   wp_register_script( 'jacatucla', get_template_directory_uri() . '/js/jacatucla.js', array( 'angular', 'angular-route' ), null, false );
