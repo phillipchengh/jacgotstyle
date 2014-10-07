@@ -21,17 +21,17 @@ wp_head();
   <div class="col-12">
     <div class="header-wrapper">
       <a href="<?php echo get_site_url(); ?>">
-        <img class="header-img" src="https://trello-attachments.s3.amazonaws.com/538bbf6dde2096b45b3e0c65/1896x538/1fab685d28b73b4c3fd149f9f7de243e/jacbanneredit1.png"></img>
+        <img class="header-img" src="http://i.imgur.com/IoXwhtA.png"></img>
       </a>
       <div class="social-media-wrapper">
         <a href="https://www.facebook.com/groups/2229680515/">
-          <img class="social-media-img" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-512.png"></img>
+          <img class="social-media-img" src="http://i.imgur.com/kYqKGv2.png"></img>
         </a>
         <a href="https://groups.google.com/forum/#!forum/ucla-jac">
-          <img class="social-media-img" src="http://www.uniform-exchange.com/wp-content/uploads/2014/08/mail.png"></img>
+          <img class="social-media-img" src="http://i.imgur.com/H2s3e4z.png"></img>
         </a>
         <a href="./feed" target="_self">
-          <img class="social-media-img" src="http://www.claudereynoldsinsurance.com/img/~www.claudereynoldsinsurance.com/right%20column/rss%202.png"></img>
+          <img class="social-media-img" src="http://i.imgur.com/RGFjzYm.png"></img>
         </a>
       </div>
     </div>
